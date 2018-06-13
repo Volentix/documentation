@@ -1,0 +1,108 @@
+\contentsline {section}{\numberline {1}Introduction}{4}
+\contentsline {section}{\numberline {2}Distributed exchanges}{4}
+\contentsline {subsection}{\numberline {2.1}Mass adoption}{4}
+\contentsline {subsection}{\numberline {2.2}Privacy, policy and security}{4}
+\contentsline {paragraph}{Some statistics}{4}
+\contentsline {paragraph}{Use of public ledger}{4}
+\contentsline {paragraph}{Types of security issues}{5}
+\contentsline {subsection}{\numberline {2.3}Lack of true decentralization}{5}
+\contentsline {subsection}{\numberline {2.4}Consensus}{5}
+\contentsline {subsubsection}{\numberline {2.4.1}Essential ctriteria}{6}
+\contentsline {subsubsection}{\numberline {2.4.2}Goals:CAP}{6}
+\contentsline {subsubsection}{\numberline {2.4.3}Problems to solve}{6}
+\contentsline {subsection}{\numberline {2.5}Cost}{6}
+\contentsline {subsection}{\numberline {2.6}Immunity}{6}
+\contentsline {subsection}{\numberline {2.7}Persistence}{6}
+\contentsline {paragraph}{IPFS\\}{7}
+\contentsline {subsection}{\numberline {2.8}Interoperability}{7}
+\contentsline {subsection}{\numberline {2.9}Scalability}{7}
+\contentsline {subsection}{\numberline {2.10}Speed}{7}
+\contentsline {subsection}{\numberline {2.11}Anonymity}{7}
+\contentsline {subsection}{\numberline {2.12}A lack of liquidity}{7}
+\contentsline {subsection}{\numberline {2.13}Lack of transparency}{8}
+\contentsline {subsection}{\numberline {2.14}User experience}{8}
+\contentsline {subsection}{\numberline {2.15}A lack of educated users / apathy}{8}
+\contentsline {subsection}{\numberline {2.16}Conclusion}{8}
+\contentsline {section}{\numberline {3}VDex}{9}
+\contentsline {subsection}{\numberline {3.1}Introduction}{9}
+\contentsline {subsection}{\numberline {3.2}General architecture and components}{9}
+\contentsline {subsubsection}{\numberline {3.2.1}Operating system}{9}
+\contentsline {subsubsection}{\numberline {3.2.2}EOSIO Components}{9}
+\contentsline {subparagraph}{ Separation of message and (n...) transaction layers }{10}
+\contentsline {subparagraph}{Polling micro service}{10}
+\contentsline {subparagraph}{Inter contract communication}{10}
+\contentsline {subparagraph}{Sandboxing}{11}
+\contentsline {subparagraph}{lock-in period}{11}
+\contentsline {subparagraph}{Liquidity}{11}
+\contentsline {subparagraph}{generalized signature verification}{11}
+\contentsline {subsection}{\numberline {3.3}Database model}{11}
+\contentsline {subparagraph}{Database Iterators}{12}
+\contentsline {subparagraph}{Persistence API}{12}
+\contentsline {subparagraph}{MongoDB bridge for other networks}{12}
+\contentsline {subsection}{\numberline {3.4}Network Topology}{12}
+\contentsline {subsubsection}{\numberline {3.4.1}Nodes \ Relays}{12}
+\contentsline {subsubsection}{\numberline {3.4.2}Hubs}{12}
+\contentsline {subsubsection}{\numberline {3.4.3}Zones}{12}
+\contentsline {subsubsection}{\numberline {3.4.4}Latency}{13}
+\contentsline {paragraph}{Speedy confirmation}{13}
+\contentsline {subsection}{\numberline {3.5}OrderBook}{13}
+\contentsline {subsubsection}{\numberline {3.5.1}Data structure}{13}
+\contentsline {subsubsection}{\numberline {3.5.2}Online order book}{13}
+\contentsline {subsubsection}{\numberline {3.5.3}Offline order book}{13}
+\contentsline {subsubsection}{\numberline {3.5.4}Order(Loopring)}{13}
+\contentsline {subsubsection}{\numberline {3.5.5}Order(EOSIO)}{14}
+\contentsline {subsubsection}{\numberline {3.5.6}Consensus model}{14}
+\contentsline {paragraph}{Raft}{14}
+\contentsline {paragraph}{2PC}{15}
+\contentsline {paragraph}{MongoDB's consensus protocol}{15}
+\contentsline {paragraph}{Augmented polling}{15}
+\contentsline {subsection}{\numberline {3.6}Ring mining}{16}
+\contentsline {subparagraph}{Mining Criteria}{16}
+\contentsline {subsection}{\numberline {3.7}VTX}{16}
+\contentsline {subsubsection}{\numberline {3.7.1}Token creation}{16}
+\contentsline {subsubsection}{\numberline {3.7.2}Token use}{16}
+\contentsline {subsubsection}{\numberline {3.7.3}Token distribution}{16}
+\contentsline {subsubsection}{\numberline {3.7.4}Fee model}{17}
+\contentsline {subparagraph}{Transaction fees\\}{17}
+\contentsline {subparagraph}{Lock-in period\\}{17}
+\contentsline {subparagraph}{Mining fees}{17}
+\contentsline {subparagraph}{EOSIO}{18}
+\contentsline {subparagraph}{Budget forecast}{18}
+\contentsline {subsection}{\numberline {3.8}Inter blockchain communication}{18}
+\contentsline {subsection}{\numberline {3.9}Security model}{19}
+\contentsline {subsubsection}{\numberline {3.9.1}Introduction}{19}
+\contentsline {subsubsection}{\numberline {3.9.2}General actions}{19}
+\contentsline {subsubsection}{\numberline {3.9.3}Contract security}{19}
+\contentsline {subsubsection}{\numberline {3.9.4}Malware detection by auditing processes}{19}
+\contentsline {subsubsection}{\numberline {3.9.5}Random diversification}{19}
+\contentsline {subsubsection}{\numberline {3.9.6}Multiple factor identification}{20}
+\contentsline {subsubsection}{\numberline {3.9.7}Logs}{20}
+\contentsline {subsubsection}{\numberline {3.9.8}Transaction as Proof of Stake (TaPoS)}{20}
+\contentsline {subsubsection}{\numberline {3.9.9}Double spend}{20}
+\contentsline {subsubsection}{\numberline {3.9.10}Front running}{20}
+\contentsline {subsubsection}{\numberline {3.9.11}Forged identities}{21}
+\contentsline {subsubsection}{\numberline {3.9.12}Insufficient Balance}{21}
+\contentsline {subsubsection}{\numberline {3.9.13}Timing attack}{22}
+\contentsline {subsubsection}{\numberline {3.9.14}Eclipse attack}{22}
+\contentsline {subsubsection}{\numberline {3.9.15}Knapsack}{22}
+\contentsline {subsubsection}{\numberline {3.9.16}Trojan malware}{22}
+\contentsline {subsubsection}{\numberline {3.9.17}Sybil attack }{22}
+\contentsline {subsubsection}{\numberline {3.9.18}Eclipse attack}{22}
+\contentsline {subsubsection}{\numberline {3.9.19}Timing attack }{22}
+\contentsline {subsubsection}{\numberline {3.9.20}Knapsack}{22}
+\contentsline {subsubsection}{\numberline {3.9.21}Trojan malware}{22}
+\contentsline {subsection}{\numberline {3.10}IBC}{22}
+\contentsline {subsection}{\numberline {3.11}Multi blockchain}{22}
+\contentsline {subsection}{\numberline {3.12}User experience}{22}
+\contentsline {subparagraph}{Simulator}{22}
+\contentsline {subparagraph}{Templates}{22}
+\contentsline {subsection}{\numberline {3.13}True decentralization}{23}
+\contentsline {subsection}{\numberline {3.14}System recovery}{23}
+\contentsline {subsection}{\numberline {3.15}Potential for innovation}{23}
+\contentsline {subsection}{\numberline {3.16}Scalable and modular design}{23}
+\contentsline {subsubsection}{\numberline {3.16.1}Problem decomposition}{23}
+\contentsline {subsubsection}{\numberline {3.16.2}Minimize state space}{23}
+\contentsline {subsubsection}{\numberline {3.16.3}Determine and minimize state replication}{23}
+\contentsline {section}{\numberline {4}Risk}{23}
+\contentsline {section}{\numberline {5}Timeline}{24}
+\contentsline {section}{\numberline {6}Conclusion}{24}

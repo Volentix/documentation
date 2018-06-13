@@ -1,0 +1,73 @@
+This is BibTeX, Version 0.99d (TeX Live 2017/Debian)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: article9.aux
+The style file: siam.bst
+Database file #1: document.bib
+Too many commas in name 1 of "Wang, Zhou, Wang, Finestone" for entry 4
+while executing---line 991 of file siam.bst
+Too many commas in name 1 of "Malavolta, Pedro Moreno-Sanchez, Aniket Kate Matteo Maffei, Srivatsan Ravi" for entry 6
+while executing---line 991 of file siam.bst
+Warning--empty journal in 17
+Warning--empty journal in 10
+Warning--empty journal in 18
+Warning--empty journal in 1
+Warning--empty journal in 16
+Warning--empty journal in 11
+Warning--empty journal in 13
+Warning--empty journal in 7
+Warning--empty journal in 8
+Warning--empty journal in 3
+Warning--empty journal in 9
+Warning--empty journal in 12
+Too many commas in name 1 of "Malavolta, Pedro Moreno-Sanchez, Aniket Kate Matteo Maffei, Srivatsan Ravi" for entry 6
+while executing---line 1034 of file siam.bst
+Warning--empty journal in 6
+Warning--empty journal in 14
+Warning--empty journal in 15
+Too many commas in name 1 of "Wang, Zhou, Wang, Finestone" for entry 4
+while executing---line 1034 of file siam.bst
+Warning--empty journal in 4
+Warning--empty journal in 5
+Warning--empty journal in 2
+You've used 18 entries,
+            2030 wiz_defined-function locations,
+            551 strings with 5175 characters,
+and the built_in function-call counts, 3524 in all, are:
+= -- 273
+> -- 132
+< -- 0
++ -- 61
+- -- 38
+* -- 312
+:= -- 629
+add.period$ -- 18
+call.type$ -- 18
+change.case$ -- 73
+chr.to.int$ -- 0
+cite$ -- 36
+duplicate$ -- 198
+empty$ -- 289
+format.name$ -- 38
+if$ -- 638
+int.to.chr$ -- 0
+int.to.str$ -- 18
+missing$ -- 18
+newline$ -- 57
+num.names$ -- 36
+pop$ -- 91
+preamble$ -- 1
+purify$ -- 55
+quote$ -- 0
+skip$ -- 90
+stack$ -- 0
+substring$ -- 95
+swap$ -- 36
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 72
+warning$ -- 18
+while$ -- 36
+width$ -- 20
+write$ -- 128
+(There were 4 error messages)
