@@ -32,15 +32,16 @@
 \begin{document}
 \tableofcontents
 \maketitle
+\begin{description}
+\item Copyright \textcopyright 2018 Volentix
+\item Copyright \textcopyright 2018 Block.one
+\item Copyright \textcopyright 2018 Loopring
+\end{description}
 
-Copyright 2018 Volentix\\
-Copyright 2018 Block.one\\
-Copyright 2018 Loopring\\
+{\tiny Without permission, anyone may use, reproduce or distribute any material in this white paper for non-commercial and educational use (i.e., other than for a fee or for commercial purposes) provided that the original source and the applicable copyright notice are cited.
 
-Without permission, anyone may use, reproduce or distribute any material in this white paper for non-commercial and educational use (i.e., other than for a fee or for commercial purposes) provided that the original source and the applicable copyright notice are cited.
-
-DISCLAIMER: This VDex Technical White Paper  is for information purposes only. The authors do not guarantee the accuracy of or the conclusions reached in this white paper, and this white paper is provided 'as is'. 
-Volentix Labs do not make and expressly disclaims all representations and warranties, express, implied, statutory or otherwise, whatsoever, including, but not limited to: (i) warranties of merchantability, fitness for a particular purpose, suitability, usage, title or non infringement; (ii) that the contents of this white paper are free from error; and (iii) that such contents will not infringe third-party rights. block.one and its affiliates shall have no liability for damages of any kind arising out of the use, reference to, or reliance on this white paper or any of the content contained herein, even if advised of the possibility of such damages. In no event will block.one or its affiliates be liable to any person or entity for any damages, losses, liabilities, costs or expenses of any kind, whether direct or indirect, consequential, compensatory, incidental, actual, exemplary, punitive or special for the use of, reference to, or reliance on this white paper or any of the content contained herein, including, without limitation, any loss of business, revenues, profits, data, use, goodwill or other intangible losses.
+DISCLAIMER: This VDex White Paper  is for information purposes only. The authors do not guarantee the accuracy of or the conclusions reached in this white paper, and this white paper is provided 'as is'. 
+Volentix Labs do not make and expressly disclaims all representations and warranties, express, implied, statutory or otherwise, whatsoever, including, but not limited to: (i) warranties of merchantability, fitness for a particular purpose, suitability, usage, title or non infringement; (ii) that the contents of this white paper are free from error; and (iii) that such contents will not infringe third-party rights. block.one and its affiliates shall have no liability for damages of any kind arising out of the use, reference to, or reliance on this white paper or any of the content contained herein, even if advised of the possibility of such damages. In no event will block.one or its affiliates be liable to any person or entity for any damages, losses, liabilities, costs or expenses of any kind, whether direct or indirect, consequential, compensatory, incidental, actual, exemplary, punitive or special for the use of, reference to, or reliance on this white paper or any of the content contained herein, including, without limitation, any loss of business, revenues, profits, data, use, goodwill or other intangible losses.}
 
 
 \begin{abstract}
@@ -541,12 +542,18 @@ The token can be used:
 			35\% Future Decentralized Treasury\\
 			\hline
 			12\% Core Development)\\
-			\hline			
-		
-			
+			\hline				
 		\end{tabular}
 	\end{center}
 \end{table}
+Pre-sale VTX holders, founders and contributors participate in a proof of non-repudiation process(1 time mining) for token allocations.
+The algorithm used implements a augmented vote for each of the 
+percentages among VTX members.
+ 
+
+
+
+
 \subsubsection{Fee model}
 \subparagraph{Transaction fees\\}
 \begin{enumerate}
@@ -661,9 +668,10 @@ The security concerns with the VDex environment can generally be categorized as 
 		\subsubsection{Double spend}
 		A double spend is an attack where the given set of coins is spent in more than one transaction.
 		\begin{enumerate}
-			\item Send two conflicting transactions in rapid succession into the network. This is called a race attack.
-			\item Pre-mine one transaction into a block and spend the same coins before releasing the block to invalidate that transaction. This is called a Finney attack.
-			\item Own 51+\% of the total computing power of the network to reverse any transaction you feel like, as well as have total control of which transactions appear in blocks. This is called a 51\% attack. 
+			\item Send two conflicting transactions in rapid succession into the network. This is called a race attack. 
+			\item Pre-mine one transaction into a block and spend the same tokens before releasing the block to invalidate that transaction. This is called a \textit{Finney} attack.
+			\item Own 51+\% of the total computing power of the network to reverse any transaction you feel like, as well as have total control of which transactions appear in blocks. This is called a 51\% attack.
+			This is impossible according to EOSIO, Loopring or Raft. 
 		\end{enumerate} 
 		\subsubsection{Front running}
 		To prevent someone from copying another node's trade solution, 
@@ -790,29 +798,38 @@ The security concerns with the VDex environment can generally be categorized as 
 	a VDex trading simulator will be provided with convenient scenarios.
 	\subparagraph{Templates}
 	Easy to use templates for standard transactions will be provided.
+	\subparagraph{Comprehensive and detailed interface}
+	\begin{enumerate}
+		\item Shows the entire market and fluctuations
+		\item Shows Shows wallet: balance and previous transactions.
+		\item Shows detailed history with built in tax calculator.
+		\item Contains toggles for advanced features.		 
+	\end{enumerate}
+	
 	\subsection{True decentralization}
 	The system does not use a shared central clock.
 	\subsection{System recovery}
-	The raft protocol provides for system recovery 
-	\subsection{Potential for innovation}	
+	The raft protocol provides robust system recovery.
+
 	\subsection{Scalable and modular design}
+	To secure the potential for innovation, the principles, 
+	concepts and paradigms proposed by components of the system
+	must favour decoupling of technologies. 
 	Since creating and maintaining distibuted and decentralized systems
 	is very complex we must use different strategies: 
 	\subsubsection{Problem decomposition}
 	Problem solving strategy of breaking a problem up into a set of subproblems, solving each of the subproblems, and then composing a solution to the original problem from the solutions to the subproblems.
 	\subsubsection{Minimize state space}
-	Dynamic programming and templating are hard because of complexity and debugging challenges.
-	Nesting conditions can also seem unimportant for normal program execution.
-	But special attention to these patterns and details in the initial design will allow to maximize efficiency while allowing for easy replacement or addition of components.   
+	Dynamic programming and templating are hard because of complexity and debugging challenges. Nesting conditions can also seem unimportant for normal program execution.But special attention to these patterns and details in the initial design will allow to maximize efficiency while allowing for easy replacement or addition of components.   
 	\subsubsection{Determine and minimize state replication}
 	State machine replication is a general method for implementing a fault-tolerant service by replicating servers and coordinating client interactions with server replicas. 
 
 \section{Risk}
 	The sheer amount of transactions VDex hopes to one day process is 
 	hard to visualize but in the context of the growing interest for decentralized exchanges, more transactions equate with more risk. 
-	Managing the risks of handling currency also proved initially to be a challenge to previous centralized providers.
-	It was a long and arduous process.
-	The evolution of the efficiency of decentralized exchanges should not be expected to be any different but unlike centralized exchanges, dexes have the support of the open source developer community which quickly contribute forward solutions to resolving problems and enhancing the product. The Volentix DAO will ensure VTX counsel nomination within assembly. This structure poses a risk by its novel and sparsely tested approach but ensures solidity by analysis of its theoretical precepts.   
+	Managing the risks of handling currency also proved initially to be a challenge to previous centralized providers.It was a long and arduous process.\\
+	- The evolution of the efficiency of decentralized exchanges should not be expected to be any different but unlike centralized exchanges, dexes have the support of the open source developer community which quickly contribute forward solutions to resolving problems and enhancing the product. \\
+	- The Volentix DAO will ensure VTX counsel nomination within assembly. This structure poses a risk by its novel and sparsely tested approach but ensures solidity by analysis of its theoretical precepts.   
 	
 \section{Timeline}	
 \begin{table}[h!]
@@ -837,14 +854,12 @@ The security concerns with the VDex environment can generally be categorized as 
 	\end{center}
 \end{table}
 		
-
 \section{Conclusion}
 
 Although certain assumptions made in this paper still remain to be verified,
 a very distinctive direction for VDex architecture can be distilled in its choice for the simplest solutions. A highly flexible and modular MVP
-based on concepts and protocols that stand out by their simplicity
-will allow for the implementation of a modularity that will benefit 
-the system with the capacity of easily add or replace components
+based on concepts and protocols that stand out by their effectiveness
+while retaining simplicity will allow for the implementation of a modularity that will benefit the system with the capacity of easily add or replace components
 in the prospect of advancing functionality.
 
 \bibliographystyle{siam}
@@ -867,4 +882,5 @@ in the prospect of advancing functionality.
 \cite{16}
 \cite{17}
 \cite{18}
+\cite{19}
 \end{document}
