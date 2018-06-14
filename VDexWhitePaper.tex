@@ -3,7 +3,7 @@
 \usepackage{listings}
 \usepackage{xcolor} % for setting colors
 \usepackage{lmodern}
-
+\usepackage{graphicx}
 \usepackage{textcomp}
 % set the default code style
 \lstset{
@@ -69,7 +69,6 @@ This document will list some advantages and shortcomings of present
 day distributed exchanges. 
 Subsequently, the VDex exchange architecture and its components will be explained.
 
-
 \section{Distributed exchanges}
 	A market economy is a decentralized economic system that acts through the distributed, 
 	local interactions in the market of individual investments. 
@@ -80,14 +79,14 @@ Subsequently, the VDex exchange architecture and its components will be explaine
 	\subsection{Privacy, policy and security}
 	\paragraph{Some statistics}
 	\begin{enumerate}
-	\item 73\% of exchanges take custody of user funds
-	\item  23\% let users control keys
+	\item 73\% of exchanges take custody of user funds.
+	\item  23\% let users control keys.
 	\item 53\% of small custodial exchanges have a written 
 	policy outlining what happens to customer funds in the 
 	event of a security breach resulting in the loss of customer 
-	funds, compared to 78\% of large custodial exchanges
+	funds, compared to 78\% of large custodial exchanges.
 	\item 33\% of custodial exchanges have a proof-of-reserve 
-	component as part of their formal security audit
+	component as part of their formal security audit.
 	\end{enumerate}
 	\paragraph{Use of public ledger}
 	The use of a public ledger can reveal transactions.\\
@@ -99,12 +98,18 @@ Subsequently, the VDex exchange architecture and its components will be explaine
 	 \item Sybil attack
 	 \item Front running
 	 \item Actual double-mining 
-	\item Wealth Attacks
-    \item Reputation Gaming
-	\item Technical Attacks
+	\item Wealth attacks
+    \item Reputation gaming
+	\item Technical attacks
+	 \item Eclipse attack 
 	\item Nothing at stake 
-    \item Email Phishing
-	\item Social Media Giveaway Scam
+    \item Email phishing
+	\item Social media giveaway Scam
+	\item Timing attack
+	\item Knapsack
+	\item Trojan malware
+	\item Insufficient balance
+	\item Timing attack
 	\end{enumerate}
 	\subsection{Lack of true decentralization}
 	
@@ -120,7 +125,7 @@ Subsequently, the VDex exchange architecture and its components will be explaine
 	\subsubsection{Political decentralization} 
 	How many individuals or organizations ultimately control the computers that the system is made up of?\\
 	\subsubsection{Logical decentralization} 
-	Are the interface and data structures more like a single monolithic object, or an amorphous swarm? \\
+	Are the interface and data structures more like a single monolithic object, or an shapeless swarm? \\
 	If you cut the system in half,will both halves continue to fully operate as independent units?
 
 	\subsection{Consensus}
@@ -228,13 +233,13 @@ Subsequently, the VDex exchange architecture and its components will be explaine
   \subsubsection{EOSIO Components}
 		\begin{enumerate}
 			\item 1. Schema defined messages and database \\
-			The Standardized Service Contract design principle advocates that the service contracts be based on standardized data models. and the analysis of the service inventory blueprint to find out the commonly occurring business documents that are exchanged between services. These business documents are then modeled in a standardized manner. The Canonical Schema pattern reduces the need for the application of the data model transformation design pattern.			
+			The \textit{Standardized Service Contract} design principle advocates that the service contracts be based on standardized data models. Analysis is done of of the service inventory blueprint to find out the commonly occurring business documents that are exchanged between services. These business documents are then modeled in a standardized manner. The Canonical Schema pattern reduces the need for the application of the data model transformation design pattern.			
 	
 		\item Binary/JSON conversion \\
 		- Human readability of JSON \\
 		- Efficiency of binary \\
 	
-		\item Separate authentification from application
+		\item Separate authentification from application.
 	
 	\item Use of web Assembly Provides sandboxing   \\
 	- Secure applications \\
@@ -244,20 +249,18 @@ Subsequently, the VDex exchange architecture and its components will be explaine
 		
 \end{enumerate}
 	 
-	\subparagraph{	Separation of message and (n...) transaction layers }
+	\subparagraph{	Separation of message and  transaction layers }
 	The separation of the message and transaction layers will augment 
-	the speed of transaction and keep unnecessary data off the blockchain.
+	the speed of transaction and keep unnecessary data off the blockchain. 
 		
 	\subparagraph{Polling micro service}
-	The exchange is running a polling micro-service which will fetch the "next unprocessed deposit".
-	By processing the history the system is informed of when the transaction was confirmed. 
+	The exchange has a polling micro-service which will fetch the next 
+	unprocessed action.By processing the history the system is informed of when the transaction was confirmed. 
 	An exchange-specify memo may be embedded on the withdraw request which can be used to map to the private database state, which in turn tracks the withdraw process.
 	
 
 	\subparagraph{Inter contract communication}
-	Smart contracts can only read data that is part of the transaction or stored in
-	blockchain state. To pass external data into a contract it will need to be sent
-	via an oracle. Reading the data is done via polling \textbf{nodeos} (the blockchain instance)
+	Smart contracts can only read data that is part of the transaction or stored in blockchain state. To pass external data into a contract it will need to be sent via an oracle. Reading the data is done via polling \textbf{nodeos} (the blockchain instance).
 	When declaring a multi\_index to use as a table contracta you would typically create a struct and typedef similar to this:\\
 	
 	\begin{lstlisting}[language=C++, caption={C++ code using listings}]
@@ -307,10 +310,18 @@ Subsequently, the VDex exchange architecture and its components will be explaine
 	A variable lock in period will also be offered where users can choose to lock in their funds for a slightly greater time than the slowest blockchain in exchange for a discount on the transaction.
 		
 	\subparagraph{Liquidity}
+	In order for a token to effectively partake in the global token
+	economy, its trading volume must cross a critical barrier where
+	these matches between buyers and sellers become frequent enough to be reliable. This
+	reliability of exchange is known as liquidity. We say a token is liquid if it is easily possible
+	to buy or sell it without considerably affecting its price.
+	
 	\begin{enumerate} 
-	\item Implementation of the Loopring protocol with the use of EOS.IO 
+	\item Implementation of the Loopring protocol with the use of EOSIO 
 	contracts acting as relays
-	\item Bancor protocol formula
+	\item IMplementation of the Bancor protocol
+	Used to bring stability to the token.
+	
 	\end{enumerate}
 	
 	\subparagraph{generalized signature verification}
@@ -327,7 +338,7 @@ Subsequently, the VDex exchange architecture and its components will be explaine
 
 	\subparagraph{Persistence API}
 	
-	EOS.IO provides a set of services and interfaces that enable 
+	EOSIO provides a set of services and interfaces that enable 
 	contract developers to persist state across action and transaction 
 	boundaries. Without persistence, state that is generated during 
 	the processing of actions and transactions will be lost when 
@@ -506,8 +517,9 @@ Pre-sale VTX holders, founders and contributors participate in a proof of non-re
 		\end{enumerate}		
 
 \subsection{VTX}
+
 \subsubsection{Token creation}
-The \textbf{eosio.token} contract from the EOS.IO framework can be used to issue EOS.IO compliant tokens.\\
+The \textbf{eosio.token} contract from the EOSIO framework can be used to issue EOSIO compliant tokens.\\
 The purpose of the token is to create liquidity in the VDex exchange.
 All orders values are momentarily converted to VTX to ensure maximum demand and growth of the token.\\ 
 
@@ -535,9 +547,9 @@ The token can be used:
 			\hline
 			28\% Public crowdsale & \$0.19+ \\
 			\hline
-			10\% Founders & Time Locked\\
+			10\% Founders & Time Locked*\\
 			\hline
-			10\% (130M VTX) Prior Work, Team and Advisors & Time Locked\\
+			10\% (130M VTX) Prior Work, Team and Advisors & Time Locked*\\
 			\hline
 			35\% Future Decentralized Treasury\\
 			\hline
@@ -545,11 +557,31 @@ The token can be used:
 			\hline				
 		\end{tabular}
 	\end{center}
+
+*Logarithmic decay token distribution over 4 years.\\
 \end{table}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\linewidth]{../Pictures/tokendistribution}
+	\caption{}
+	\label{fig:tokendistribution}
+\end{figure}
+
+
+
+
 Pre-sale VTX holders, founders and contributors participate in a proof of non-repudiation process(1 time mining) for token allocations.
 The algorithm used implements a augmented vote for each of the 
 percentages among VTX members.
- 
+%VTX generated on demand. 
+%Funds for applications.
+%Decred.
+%POW
+%Hebacus.
+
+
+
 
 
 
@@ -598,7 +630,7 @@ After the contract is destroyed, the locked tokens are returned.
 \item Context Free Actions \\
 Most of the scalability techniques proposed by Ethereum (Sharding, Raiden, Plasma, State Channels) become much more efficient, parallelizable, and practical while also ensuring efficient inter-blockchain communication and unlimited scalability.
 A Context Free Action involves computations that depend only on transaction data, but not upon the blockchain state. 
-EOS.IO can process signature verification in parallel.
+EOSIO can process signature verification in parallel.
 
 \item No uses of mutex or locks for on chain parallelisation
 \item All accounts must only read and write in their own private database
@@ -671,8 +703,11 @@ The security concerns with the VDex environment can generally be categorized as 
 			\item Send two conflicting transactions in rapid succession into the network. This is called a race attack. 
 			\item Pre-mine one transaction into a block and spend the same tokens before releasing the block to invalidate that transaction. This is called a \textit{Finney} attack.
 			\item Own 51+\% of the total computing power of the network to reverse any transaction you feel like, as well as have total control of which transactions appear in blocks. This is called a 51\% attack.
-			This is impossible according to EOSIO, Loopring or Raft. 
+			This is impossible according to EOSIO, Loopring or Raft.
+			If a block producer takes an unreasonable amount of runtime, the process is blacklisted.
+			  
 		\end{enumerate} 
+
 		\subsubsection{Front running}
 		To prevent someone from copying another node's trade solution, 
 		and have it mined before the next supposed transaction in the pool, 
@@ -721,7 +756,7 @@ The security concerns with the VDex environment can generally be categorized as 
 			to parties other than the ring-miner itself.
 			\item The Loopring Protocol will now verify each
 			against the corresponding \textbf{authAddr}
-			and reject the order-ring if anyOwn 51+% of the total computing power of the Bitcoin network to reverse any transaction you feel like, as well as have total control of which transactions appear in blocks. This is called a 51% attack.
+			and reject the order-ring if anyOwn 51+\% of the total computing power of the Bitcoin network to reverse any transaction you feel like, as well as have total control of which transactions appear in blocks. This is called a 51\% attack.
 			is missing or invalid.
 			The result is that now:
 			The order's signature (by the private-key of the owner
@@ -766,17 +801,7 @@ The security concerns with the VDex environment can generally be categorized as 
 		\subsubsection{Timing attack} 
 		The randomness of the raft algorithm prevents this.
 		
-		\subsubsection{Eclipse attack}
-		
-		\subsubsection{Knapsack}  
-		\subsubsection{Trojan malware} 
-		\subsubsection{Sybil attack }
-		\subsubsection{Eclipse attack} 
-		\subsubsection{Timing attack }
-		\subsubsection{Knapsack}  
-		\subsubsection{Trojan malware}
-		
-		
+	
 		
 	\subsection{IBC}
 	
@@ -883,4 +908,20 @@ in the prospect of advancing functionality.
 \cite{17}
 \cite{18}
 \cite{19}
+%Dash
+%Omni
+%NXT
+%forging formula
+%VertCoin
+%Multiple algos for mining
+%Verge (multiple algos) I2P Tor
+%Bastille
+%Ark
+%Halo
+%unicoin
+%Unocoin
+%Polka Dot
+%Hashgraphs
+
+ 
 \end{document}
