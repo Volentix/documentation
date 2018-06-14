@@ -33,14 +33,14 @@
 \tableofcontents
 \maketitle
 
-Copyright 2018 Volentix
-Copyright 2018 Block.one
-Copyright 2018 Loopring
+Copyright 2018 Volentix\\
+Copyright 2018 Block.one\\
+Copyright 2018 Loopring\\
 
 Without permission, anyone may use, reproduce or distribute any material in this white paper for non-commercial and educational use (i.e., other than for a fee or for commercial purposes) provided that the original source and the applicable copyright notice are cited.
 
 DISCLAIMER: This VDex Technical White Paper  is for information purposes only. The authors do not guarantee the accuracy of or the conclusions reached in this white paper, and this white paper is provided 'as is'. 
-Vloentix Labs do not make and expressly disclaims all representations and warranties, express, implied, statutory or otherwise, whatsoever, including, but not limited to: (i) warranties of merchantability, fitness for a particular purpose, suitability, usage, title or non infringement; (ii) that the contents of this white paper are free from error; and (iii) that such contents will not infringe third-party rights. block.one and its affiliates shall have no liability for damages of any kind arising out of the use, reference to, or reliance on this white paper or any of the content contained herein, even if advised of the possibility of such damages. In no event will block.one or its affiliates be liable to any person or entity for any damages, losses, liabilities, costs or expenses of any kind, whether direct or indirect, consequential, compensatory, incidental, actual, exemplary, punitive or special for the use of, reference to, or reliance on this white paper or any of the content contained herein, including, without limitation, any loss of business, revenues, profits, data, use, goodwill or other intangible losses.
+Volentix Labs do not make and expressly disclaims all representations and warranties, express, implied, statutory or otherwise, whatsoever, including, but not limited to: (i) warranties of merchantability, fitness for a particular purpose, suitability, usage, title or non infringement; (ii) that the contents of this white paper are free from error; and (iii) that such contents will not infringe third-party rights. block.one and its affiliates shall have no liability for damages of any kind arising out of the use, reference to, or reliance on this white paper or any of the content contained herein, even if advised of the possibility of such damages. In no event will block.one or its affiliates be liable to any person or entity for any damages, losses, liabilities, costs or expenses of any kind, whether direct or indirect, consequential, compensatory, incidental, actual, exemplary, punitive or special for the use of, reference to, or reliance on this white paper or any of the content contained herein, including, without limitation, any loss of business, revenues, profits, data, use, goodwill or other intangible losses.
 
 
 \begin{abstract}
@@ -64,9 +64,9 @@ VDex is a DAO and its governance allows for non disruptive and collaborative act
 VTX token.
 \end{abstract}
 \section{Introduction}
-This document will listing some advantages and shortcomings of present 
+This document will list some advantages and shortcomings of present 
 day distributed exchanges. 
-Subsequently, the VDex exchange architecture and its components will be exposed.
+Subsequently, the VDex exchange architecture and its components will be explained.
 
 
 \section{Distributed exchanges}
@@ -106,16 +106,21 @@ Subsequently, the VDex exchange architecture and its components will be exposed.
 	\item Social Media Giveaway Scam
 	\end{enumerate}
 	\subsection{Lack of true decentralization}
-	\begin{enumerate}
-	\item Distributed:\\ not all the processing of the transactions is done in the same place. 
-	\item Decentralized: not one single entity has control over all the processing.
-	\end{enumerate}
-	Some services can remain off-chain. 
-	(ie. onchain orderbooks are expensive and not efficient enough)
-	Architectural (de)centralization how many physical computers is a system made up of? How many of those computers can it tolerate breaking down at any single time?
-	Political (de)centralization how many individuals or organizations ultimately control the computers that the system is made up of?
-	Logical (de)centralization does the interface and data structures that the system presents and maintains look more like a single monolithic object, or an amorphous swarm? One simple heuristic is: if you cut the system in half, including both providers and users, will both halves continue to fully operate as independent units?
 	
+	\subsubsection{\textbf{Distributed}}
+	Not all the processing of the transactions is done in the same place. 
+		
+	\subsubsection{\textbf{Decentralized}}
+	Not one single entity has control over all the processing.
+	
+	\subsubsection{Architectural decentralization} 
+	How many physical computers is a system made up of?\\ 
+	How many of those computers can it tolerate breaking down at any single time?\\
+	\subsubsection{Political decentralization} 
+	How many individuals or organizations ultimately control the computers that the system is made up of?\\
+	\subsubsection{Logical decentralization} 
+	Are the interface and data structures more like a single monolithic object, or an amorphous swarm? \\
+	If you cut the system in half,will both halves continue to fully operate as independent units?
 
 	\subsection{Consensus}
 	 A consensus algorithm is a process in computer science used to achieve agreement on a single data value among distributed processes or systems. Consensus algorithms are designed to achieve reliability in a network involving multiple unreliable nodes. As a result, consensus algorithms must be fault-tolerant.
@@ -168,7 +173,7 @@ Subsequently, the VDex exchange architecture and its components will be exposed.
 	- Possible blockchain bloat with ethereum and bitcoin network.  
 	\subsection{Speed}
 	- Blockchain transactions just take time to be validated.\\ 
-	- It is always as fast as the slowest of the two blockchains being traded.
+	- It is always as fast as the slowest of the two blockchains being traded.\\
 	- There are higher delays due to peaks of demand.
 	\subsection{Anonymity}
 	- Most decentralized exchanges do require the creation of an account before beginning trading.\\ 
@@ -610,7 +615,7 @@ transaction based on IBC proofs from the originating chain.
 \subsubsection{Introduction}
 The assumptions made in this section are made from the analysis 
 on gathered information.
-Full security prototyping, testing and securing will occur according to the timeline. 
+Full security prototyping, testing and securing will occur according to the chart in the \textbf{Timeline} section. 
 The security concerns with the VDex environment can generally be categorized as variants of the following scenarios:
 	\begin{enumerate}
 		\item The attacker execute malicious code within a transaction
@@ -641,11 +646,11 @@ The security concerns with the VDex environment can generally be categorized as 
 		\subsubsection{Malware detection by auditing processes}
 		The system will provide insights on rogue processes during the transaction period 
 		\subsubsection{Random diversification}
-		- By using the raft protocol in the election process, a certain level of randomization is aquired.\\
+		By using the raft protocol in the election process, a certain level of randomization is aquired.
 		\subsubsection{Multiple factor identification}
-		Provided by EOSIO
+		Provided by EOSIO.
 		\subsubsection {Logs}
-			Inspection of logs as control.
+			Ensure inspection of logs as control.
 			\begin{enumerate}
 				\item Raft.
 				\item Anomaly detection with AI(Numenta).
@@ -654,16 +659,21 @@ The security concerns with the VDex environment can generally be categorized as 
 		\subsubsection{Transaction as Proof of Stake (TaPoS)}
 			Prevents a replay of a transaction on forks that do not include the referenced block signals the network that a particular user and their stake are on a specific fork.
 		\subsubsection{Double spend}
-
+		A double spend is an attack where the given set of coins is spent in more than one transaction.
+		\begin{enumerate}
+			\item Send two conflicting transactions in rapid succession into the network. This is called a race attack.
+			\item Pre-mine one transaction into a block and spend the same coins before releasing the block to invalidate that transaction. This is called a Finney attack.
+			\item Own 51+\% of the total computing power of the network to reverse any transaction you feel like, as well as have total control of which transactions appear in blocks. This is called a 51\% attack. 
+		\end{enumerate} 
 		\subsubsection{Front running}
 		To prevent someone from copying another node's trade solution, 
 		and have it mined before the next supposed transaction in the pool, 
-		a higher fee per transaction is charged. 
-		The major scheme of front-running in  any protocol for
-		order-matching) is order-filch: when a front-runner steals
+		a higher fee per transaction is charged.\\ 
+		The major scheme of front-running in any protocol for
+		order-matching is order-filch: when a front-runner steals
 		one or more orders from a pending order book settlement
-		transaction. When a front-runner
-		steals the entire order book from a pending transaction.
+		transaction, In the case of Loopring, a front-runner
+		could steal the entire order book from a pending transaction.
 		When a submit transaction is not confirmed and
 		is still in the pending transaction pool, anyone can easily
 		spot such a transaction and replace \textbf{minerAddress} with
@@ -703,7 +713,7 @@ The security concerns with the VDex environment can generally be categorized as 
 			to parties other than the ring-miner itself.
 			\item The Loopring Protocol will now verify each
 			against the corresponding \textbf{authAddr}
-			and reject the order-ring if any
+			and reject the order-ring if anyOwn 51+% of the total computing power of the Bitcoin network to reverse any transaction you feel like, as well as have total control of which transactions appear in blocks. This is called a 51% attack.
 			is missing or invalid.
 			The result is that now:
 			The order's signature (by the private-key of the owner
