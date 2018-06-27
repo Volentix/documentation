@@ -41,19 +41,15 @@
 {\tiny Without permission, anyone may use, reproduce or distribute any material in this white paper for non-commercial and educational use (i.e., other than for a fee or for commercial purposes) provided that the original source and the applicable copyright notice are cited.
 
 DISCLAIMER: This VDex White Paper  is for information purposes only. The authors do not guarantee the accuracy of or the conclusions reached in this white paper, and this white paper is provided 'as is'. 
-Volentix Labs do not make and expressly disclaims all representations and warranties, express, implied, statutory or otherwise, whatsoever, including, but not limited to: (i) warranties of merchantability, fitness for a particular purpose, suitability, usage, title or non infringement; (ii) that the contents of this white paper are free from error; and (iii) that such contents will not infringe third-party rights. block.one and its affiliates shall have no liability for damages of any kind arising out of the use, reference to, or reliance on this white paper or any of the content contained herein, even if advised of the possibility of such damages. In no event will block.one or its affiliates be liable to any person or entity for any damages, losses, liabilities, costs or expenses of any kind, whether direct or indirect, consequential, compensatory, incidental, actual, exemplary, punitive or special for the use of, reference to, or reliance on this white paper or any of the content contained herein, including, without limitation, any loss of business, revenues, profits, data, use, goodwill or other intangible losses.}
+Volentix Labs do not make and expressly disclaims all representations and warranties, express, implied, statutory or otherwise, whatsoever, including, but not limited to: (i) warranties of merchantability, fitness for a particular purpose, suitability, usage, title or non infringement; (ii) that the contents of this white paper are free from error; and (iii) that such contents will not infringe third-party rights. Volentix Labs and its affiliates shall have no liability for damages of any kind arising out of the use, reference to, or reliance on this white paper or any of the content contained herein, even if advised of the possibility of such damages. In no event will block.one or its affiliates be liable to any person or entity for any damages, losses, liabilities, costs or expenses of any kind, whether direct or indirect, consequential, compensatory, incidental, actual, exemplary, punitive or special for the use of, reference to, or reliance on this white paper or any of the content contained herein, including, without limitation, any loss of business, revenues, profits, data, use, goodwill or other intangible losses.}
 
+%hundedth monkey
 
 \begin{abstract}
-The capacity of systems to recursively self regulate is one of the mech-
-anisms used by evolution to enhance species. Distributed applications are
-doing this very well and their influence can be seen in the architecture
-and designs of emerging crypto-currency exchanges. Because they handle
-such large amounts of capital, exchanges are powerful entities, in a global
-sense. Can the acceptation by traders of decentralized exchanges act as a
-driving force in the acceptance and proliferation of decentralized ideology
-as a whole? 
-With this organic momentum we introduce VDex, a decentralized exchange 
+The capacity of systems to recursively self regulate is one of the mechanisms used by evolution to enhance species. Distributed applications are doing this very well and their influence can be seen in the architecture
+and designs of emerging cryptocurrency exchanges. Because they handle such large amounts of capital, exchanges are powerful entities, in a global
+sense. Can the adoption by traders of decentralized exchanges act as a driving force in the acceptance and proliferation of decentralized ideology as a whole? 
+With this momentum we introduce VDex, a decentralized exchange 
 with the user and community in mind. Using some of the most recent paradigms 
 and established protocols for security, ease of use and multi asset support, 
 this low friction peer-to-peer exchange abides by open standards to ensure 
@@ -109,7 +105,7 @@ Subsequently, the VDex exchange architecture and its components will be explaine
 	\item Knapsack
 	\item Trojan malware
 	\item Insufficient balance
-	\item Timing attack
+
 	\end{enumerate}
 	\subsection{Lack of true decentralization}
 	
@@ -569,10 +565,10 @@ The token can be used:
 \end{figure}
 
 
-
-
 Pre-sale VTX holders, founders and contributors participate in a proof of non-repudiation process(1 time mining) for token allocations.
-The algorithm used implements a augmented vote for each of the 
+The algorithm used implements a augmented vote for each of the 	modified:   README.md
+modified:   VDexWhitePaper.tex
+
 percentages among VTX members.
 %VTX generated on demand. 
 %Funds for applications.
@@ -595,6 +591,7 @@ percentages among VTX members.
 \end{enumerate}
 \subparagraph{Lock-in period\\}
 \begin{enumerate}
+
 	\item User can lock in funds for 24hrs and have a free transaction\\
 	\item User can lock in funds for 24hrs+ and generate VTX \\
 \end{enumerate}
@@ -677,6 +674,15 @@ The security concerns with the VDex environment can generally be categorized as 
 		\end{enumerate}
 	\end{enumerate}
 		\subsubsection{Contract security}
+		//Todo
+		keep vast majority of funds in a time-delayed, multi-sig controlled account
+		use multi-sig on the hot wallet with several independent processes/servers double-checking all withdrawals
+		deploy a custom contract that only allows withdrawals to KYC'd accounts and require multi-sig to white-list accounts
+		deploy a custom contract that only accepts deposits of known tokens from KYC'd accounts
+		deploy a custom contract that enforces a mandatory 24-hour waiting period for all withdrawals
+		utilize hardware wallets for all signing, even automated withdrawal
+		
+		
 		\begin{enumerate}
 		\item Upgrade broken contracts
 		\item Pause the functionality of a contract 
@@ -798,8 +804,8 @@ The security concerns with the VDex environment can generally be categorized as 
 		effort by, for example, blacklisting addresses and dropping
 		related orders.
 		
-		\subsubsection{Timing attack} 
-		The randomness of the raft algorithm prevents this.
+		\subsubsection{Timing attack}
+		 Timing attacks are a class of cryptographic attacks through which a third-party observer can deduce the content of encrypted data by recording and analyzing the time taken to execute cryptographic algorithms.The randomness of the timeouts in the raft algorithm prevents this.
 		
 	
 		
