@@ -316,21 +316,11 @@ This prevents forking and allows for a strong consistency model.
 As enunciated above, other protocols such as PARSEC and 
 the introduction of Directed acyclic graphs are being considered but 
 on the other hand The following protocols have been discarded:
-\paragraph{2PC}
-Commit-request phase (voting phase), and the commit phase, where the coordinator decides whether to commit or not, based on the information gathered in the voting phase. Problems in the presence of failures. Assumes there is storage that can be trusted at each node, that no node crashes, and that nodes can communicate with each other. Blocking protocol. 
-
-\paragraph{MongoDB's consensus protocol}
-MongoDB uses asynchronous replication by default so there is a risk of losing data when the primary goes down.
-Async replication is fast since it needs not wait for the slaves to
-acknowledge a write before telling a client that everything is saved.
-But, this scheme will lose data when the master goes down because the
-client will think everything is safe when in fact its recent writes
-are gone. 
 
 \paragraph{Augmented polling}
 As an excercise for democratizing the platform,
-Pre-sale VTX holders, founders and contributors 
-participate in a proof of non-repudiation process(1 time mining) 
+pre-sale VTX holders, founders and contributors 
+participate in a proof of non-repudiation process
 for token allocations.
 
 
