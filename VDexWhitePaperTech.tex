@@ -1,0 +1,707 @@
+\documentclass[]{article}
+\usepackage{url} 
+\usepackage{listings}
+\usepackage{xcolor} % for setting colors
+\usepackage{lmodern}
+\usepackage{graphicx}
+\usepackage{textcomp}
+% set the default code style
+\lstset{
+	frame=tb, % draw a frame at the top and bottom of the code block
+	tabsize=4, % tab space width
+	showstringspaces=false, % don't mark spaces in strings
+	numbers=left, % display line numbers on the left
+	commentstyle=\color{green}, % comment color
+	keywordstyle=\color{blue}, % keyword color
+	stringstyle=\color{red} % string color
+}
+
+%opening
+\title{VDex White Paper v0.5}
+\author{
+		The Volentix Labs Team\\
+	\texttt{info@volentixlabs.com}
+}
+
+\begin{document}
+\tableofcontents
+\maketitle
+\begin{description}
+\item Copyright \textcopyright 2018 Volentix
+\item Copyright \textcopyright 2018 Block.one
+\item Copyright \textcopyright 2018 Loopring
+\item Copyright \textcopyright 2018 Bancor
+\end{description}
+
+{\tiny Without permission, anyone may use, reproduce or distribute any material in this white paper for non-commercial and educational use (i.e., other than for a fee or for commercial purposes) provided that the original source and the applicable copyright notice are cited.
+
+DISCLAIMER: This VDex White Paper  is for information purposes only. The authors do not guarantee the accuracy of or the conclusions reached in this white paper, and this white paper is provided 'as is'. 
+Volentix Labs do not make and expressly disclaims all representations and warranties, express, implied, statutory or otherwise, whatsoever, including, but not limited to: (i) warranties of merchantability, fitness for a particular purpose, suitability, usage, title or non infringement; (ii) that the contents of this white paper are free from error; and (iii) that such contents will not infringe third-party rights. Volentix Labs and its affiliates shall have no liability for damages of any kind arising out of the use, reference to, or reliance on this white paper or any of the content contained herein, even if advised of the possibility of such damages. In no event will block.one or its affiliates be liable to any person or entity for any damages, losses, liabilities, costs or expenses of any kind, whether direct or indirect, consequential, compensatory, incidental, actual, exemplary, punitive or special for the use of, reference to, or reliance on this white paper or any of the content contained herein, including, without limitation, any loss of business, revenues, profits, data, use, goodwill or other intangible losses.}
+
+%hundedth monkey
+
+\begin{abstract}
+The capacity of systems to recursively self regulate is one of the mechanisms used by evolution to enhance species. Distributed applications are doing this very well and their influence can be seen in the architecture
+and designs of emerging cryptocurrency exchanges. Because they handle such large amounts of capital, exchanges are powerful entities, in a global sense. 
+Can the adoption by traders of decentralized exchanges act as a driving force in the acceptance and proliferation of decentralized ideology as a whole? 
+With this momentum we introduce VDex, a decentralized exchange 
+with the user and community in mind. Using some of the most recent paradigms 
+and established protocols for security, ease of use and multi asset support, 
+this low friction peer-to-peer exchange abides by open standards and ensures 
+a harmonious and seamless flow among decentralized applications. 
+Focused on functionality, this collection of smart EOSIO contracts are 
+publicly accessible and contain easy to use options for security, anonymity, 
+speed of payment, liquidity and profit margin.
+VDex is a DAO and its governance allows for non disruptive and collaborative action among VTX holders towards the growth and stability of the VTX token.
+\end{abstract}
+\section{Introduction}
+
+VDex should provide easy to use settings for speed, cost, anonymity and security within the scope of scalability. Power users should feel enabled with the freedom to choose and thrive. Equally, new users should feel welcomed and secure.
+The sustainability of the product will reside on an architecture 
+whith the ability to replace its own components, integrate new technologies while allowing for the migration of 2nd generation blockchain functionality.  
+The task of building VDex mainly resides in successfully merging
+and integrating today's best protocols, paradigms and patterns to match the 
+Volentix requirements on top of the EOSIO decentralized operating system.
+To provide a flexible modular product, developer will needed an environment that serves its purpose without burdening design with redundant complexity. 
+ 	
+\section{Methodology}
+
+All assumptions made in this paper will be verified by prototyping
+with EOSIO's \textbf{\textit{cleos}} command line through functional python testing. This software resides at: https://github.com/Volentix/ezeos
+
+\section{VDex}	
+	 
+\subsection{Components}
+	
+	\subsubsection{Operating system}
+	EOSIO is an operating system-like framework upon which decentralized applications can be built. The software provides accounts, authentication, databases, asynchronous communication and scheduling across clusters. 
+	Components and protocols are already built into the platform and just a subset can be used to satisfy VDex requirements.
+	VDex will initially benefit from the most standard features offered by EOSIO such as account and wallet creation and the recovery of stolen keys but will subsequently have to implement the paradigms and patterns suggested by most protocols for the creation of decentralized exchanges through its contracts and provided tools:\\  
+	\begin{enumerate}
+			\item \textbf{Schema defined messages and database} \\
+			The \textit{Standardized Service Contract} design principle advocates that the service contracts be based on standardized data models. Analysis is done on the service inventory blueprint to find out the commonly occurring business documents that are exchanged between services. These business documents are then modeled in a standardized manner. The Canonical Schema pattern reduces the need for the application of the data model transformation design pattern.			
+	
+		\item\textbf{ Binary/JSON conversion} \\
+		 The contracts provide the human readability of JSON and the efficiency of binary \\
+	
+		\item \textbf{Parallelisation and optimisation\\ } 
+		Separating authentification from application provides scalability by offloading the blockchain.
+	
+	\item \textbf{Web Assembly}   \\
+	Web assembly has the highest performance for web application while also providing a sandbox to secure applications\\
+	Sandboxing is a software management strategy that isolates applications from
+	critical system resources and other programs. 
+	It provides an extra layer of security that prevents malware 
+	or harmful applications from negatively affecting system.
+	It can be implemented by enforcing the following:
+	\begin{enumerate}
+		\item Network-access restrictions.
+		\item Restricted filesystem namespace.
+		\item Rule-based execution. 
+		\item Control over what processes are spawned.
+		\item Read and write control.
+		\item Garbage collection. 
+	\end{enumerate}
+	
+	\item \textbf{C/C++ contracts\\}
+	- STL and Boost containers\\
+	- C++ 14
+	The exchange will have a polling micro-service which will fetch the next unprocessed action.
+	By processing the history the system will be informed of when the transaction was confirmed. For example, an exchange-specify memo may be embedded on the withdraw request which can be used to map to the private database state, which in turn tracks the withdraw process.	
+	
+	\item \textbf{Context Free Actions} \\
+	Most of the scalability techniques proposed by Ethereum (Sharding, Raiden, Plasma, State Channels) become much more efficient, parallelizable, and practical while also ensuring efficient inter-blockchain communication and unlimited scalability.
+	A Context Free Action involves computations that depend only on transaction data, but not upon the blockchain state.
+	ex: Parallel processed signature verifications\\
+
+	
+		
+\end{enumerate}
+	 
+	\subsubsection{Inter Contract Communication}
+	Data is shared between contracts via an oracle. 
+	Most reading the of data is done via polling \textbf{nodeos} (the blockchain instance)	
+	
+	\subsubsection{Side Chains}
+	For inter-blockchain communication, the EOSIO protocol creates a TCP like communication channel between chains to evaluate proofs.
+	For each shard (a unit of parallelizable execution in a cycle) a balanced merkle tree is constructed of these action commitments to generate a temporary shared merkle root. 
+	This is done for speed of parallel computation. The block header contains the root of a balanced merkle tree whose leaves are the roots of these individual shard merkle trees. 
+
+	
+	\subsubsection{Liquidity}
+	In order for a token to effectively partake in the global token
+	economy, its trading volume must cross a critical barrier where
+	the matches between buyers and sellers become frequent enough to ensure a stable pool of "coincidences of wants". 
+	This reliability within an exchange is known as liquidity. We say a token is liquid if it is easily possible to buy or sell it without considerably affecting its price.
+	
+	\begin{enumerate} 
+		\item Implementation of the Loopring protocol with the use of EOSIO 
+		contracts acting as nodes
+		\item Implementation of the Bancor protocol
+		used to bring stability to the token.
+	
+	
+		\end{enumerate}
+	
+	\subsubsection{Hashed timelock contracts}
+	A Hashed Timelock Contract (HTLC) is a type of smart contract enabling the implementation of time-bound transactions.
+	Users will be offered a variable lock in period for their transations choosing or not
+	to lock in their funds for a slightly greater time than the slowest blockchain in exchange for a discount on the transaction.
+	
+	\subsection{Database model}
+	 Each account has its own database which communicates through other accounts through message handlers.
+	
+	\subparagraph{Database Iterators}
+	Database API that is based upon iterators. Iterators give WebAssembly a handle by which it can quickly find and iterate over database objects. This new API gives a dramatic performance increase by changing the complexity of finding the next or previous item in a database from O(log(n)) to O(1).
+
+	\subparagraph{Persistence API}
+	
+	EOSIO provides a set of services and interfaces that enable 
+	contract developers to persist state across action and transaction 
+	boundaries. Without persistence, state that is generated during 
+	the processing of actions and transactions will be lost when 
+	processing goes out of scope. 
+	
+	The persistence components include:
+	
+	- Services to persist state in a database
+	
+	- Enhanced query capabilities to 
+	  find and retrieve database content
+	
+	- C++ APIs to these services
+	
+	- C APIs for access to core services
+
+	\subparagraph{MongoDB bridge for other networks}
+	Database state should be available for Raiden, Plasma, State Channels
+	
+	\subsection{Network Topology}
+	\subsubsection{Nodes}
+	All wallets that have sufficient funds and well know to the network can be used as nodes\\
+	\begin{enumerate}
+		\item Merge order book information with others through inter contract communication sharing database state or with high speed dedicated channels for offline communication.
+		\item Nodes will mine order ring or chosen data structure.
+	\end{enumerate}
+	
+	\subsubsection{Hubs}
+	Hubs are geographically distibuted dedicated harware modules to speed up and ensure  
+	information flows across the network in an balanced and efficient manner. 
+	\begin{enumerate}
+		\item Order cancelling for single and multi signatures 
+		\item Scheduler (Timeouts)
+		\item Asset tokenization services
+		\item Order book browser populating
+		\item Load balancing
+		\item log analysis for security
+		\item receives logs from nodes
+		\item relays Vespucci information to Verto
+	\end{enumerate}
+
+	\subsubsection{Latency}	
+	EOSIO has low latency block confirmation (0.5 seconds).
+	This latency can be provided if the currencies being traded are issued from blockchains that are equally fast, other wise, the transaction is as fast as the slowest block chain.
+	On completion of the transaction, a transaction receipt is generated. Receiving a transaction hash does not mean that the transaction has been confirmed, it only means that the node accepted it without error, which also means that there is a high probability other producers will accept it. By means of confirmation, you should see the transaction in the transaction history with the block number of which it is included.
+
+\subsection{OrderBook}
+The flexibility of certain protocols allows for the malleability of the order book.
+According to various scenarios or concensus algorithms, 
+VDex order books could morph to accomodate their cost, bandwidth, and security criteria:  
+\subsubsection{Data structures}
+\begin{enumerate}
+\item Loopring FIFO
+\item EOSIO multi-index
+\end{enumerate}
+\subsubsection{Operations}
+\begin{enumerate}
+\item Remove the existing orders if no match is found.
+\item Add a new order that didn't fully match.
+\item Remove a cancelled order.
+\item Merge with remote book.
+\item Morph to a new container.(Online only)
+\end{enumerate}
+
+\subsubsection{Online order book}
+Order books reside in a persistent container on each node belonging to the same account as all the other nodes.
+\subsubsection{Offline order book}
+A sparse distributed representation of hub log data and order book will
+act as an extra layer of magnification for anomalies.
+Also with concepts such as hierachical temporal memory and the BlockCollider protocol, offline order books will contribute to realtime analysis in \textbf{Vespucci} to create a VDex meta blockchain ledger. 
+\subsubsection{Order(Loopring)}
+\begin{lstlisting}[language=C++, caption={C++ code using listings}]
+message Order {
+address protocol;
+address owner;
+address tokenS;
+address tokenB;
+uint256 amountS;
+uint256 amountB;
+unit256 lrcFee
+unit256 validSince; // Seconds since epoch
+unit256 validUntil; // Seconds since epoch
+marginSplitPercentage; // [1-100]
+bool buyNoMoreThanAmountB;
+uint256
+walletId;
+address authAddr;
+// v, r, s are parts of the signature
+uint8 v;
+bytes32 r;
+bytes32 s;
+// Dual-Authoring private-key,
+of our own order book follows an OTC model, where limit
+// not used for calculating order's hash,
+orders are positioned based on price alone. Timestamps of
+string authKey;
+uint256 nonce;
+}
+
+\end{lstlisting}
+
+\subsubsection{Order(EOSIO)}
+\begin{lstlisting}[language=C++, caption={C++ code using listings}]
+
+struct limit_order {
+	uint64_t     id;
+	uint128_t    price;
+	uint64_t     expiration;
+	account_name owner;
+	
+	auto primary_key() const { return id; }
+	uint64_t get_expiration() const { return expiration; }
+	uint128_t get_price() const { return price; }
+	
+	EOSLIB_SERIALIZE( limit_order, ( id )( price )( expiration )( owner ) )
+};
+
+\end{lstlisting}
+
+\subsubsection{Consensus model}
+VTX is required to participate in the consensus process and earn both block rewards and transaction fees. 
+Time is an essential component to control distributed systems.
+No one clock can reside on one system to ensure a decentralized system.
+Since the task of matching orders is fairly easy, the simplest 
+solutions will be chosen for what will be considered "Mining" of the VTX token.
+Providing a way to easily replace protocols as new ones emerge can ensure
+an even more democratic approach.
+
+\paragraph{Raft}
+Raft is a protocol using RPCs to ensure consensus among a node cluster.
+It is remarquable in its simplicity and effectiveness. 
+It consists of log propagation mechanism punctuated by leader election\\
+\begin{enumerate}
+	\item Leader election\\
+	- Randomized timeouts are stamped on nodes\\
+	- Timeout triggers candidacy\\
+	- Follower becomes leader and starts election when timeout is reached\\
+	- If leader discovers follower with larger term, it updates its term,\\  cancels election and reverts to follower.
+	- elections have to happen within the shortest timeout of all the\\ followers within the cluster
+	- If election is stuck because of two nodes timing out at the same time,\\ 
+	next timeout is used\\
+	- Cluster not accepting data from client in election phase.\\
+	- Time to send messages to followers must be less than the time
+	of the shortest timeout within the followers. 
+	\item Log replication\\
+		- Leader takes commands from clients, appends to log\\
+		- Leader replicates its log to others\\
+		- Commit state\\
+		- Consistency checks for missing or extranuous entries\\
+	\item Safety\\
+	- Only server with up to date log can become leader\\
+	- No votes because no logs.\\
+\end{enumerate}
+This prevents forking and allows for a strong consistency model.
+\paragraph{}
+
+As enunciated above, other protocols such as PARSEC and 
+the introduction of Directed acyclic graphs are being considered but 
+on the other hand The following protocols have been discarded:
+\paragraph{2PC}
+Commit-request phase (voting phase), and the commit phase, where the coordinator decides whether to commit or not, based on the information gathered in the voting phase. Problems in the presence of failures. Assumes there is storage that can be trusted at each node, that no node crashes, and that nodes can communicate with each other. Blocking protocol. 
+
+\paragraph{MongoDB's consensus protocol}
+MongoDB uses asynchronous replication by default so there is a risk of losing data when the primary goes down.
+Async replication is fast since it needs not wait for the slaves to
+acknowledge a write before telling a client that everything is saved.
+But, this scheme will lose data when the master goes down because the
+client will think everything is safe when in fact its recent writes
+are gone. 
+
+\paragraph{Augmented polling}
+As an excercise for democratizing the platform,
+Pre-sale VTX holders, founders and contributors 
+participate in a proof of non-repudiation process(1 time mining) 
+for token allocations.
+
+
+\subsection{Ring mining}
+\subparagraph{Mining Criteria}
+		\begin{enumerate}
+		\item Check for subrings
+		\item Load Balancing (Fill rate/stock vailability)
+		\item Rate is equal or less than the original buy rate set by user
+		\item Process cancellations
+		\item Order are scaled according to the history of filled and cancelled amounts 
+		\end{enumerate}		
+
+\subsection{VTX}
+
+\subsubsection{Token creation}
+The \textbf{eosio.token} contract from the EOSIO framework can be used to issue EOSIO compliant tokens. VTX should be generated on demand with each request for a transaction. \\
+The purpose of the token is to create liquidity in the VDex exchange.
+All orders values are momentarily converted to VTX to ensure maximum demand and growth of the token.\\ 
+
+\subsubsection{Token use}
+
+The token can be used:
+\begin{enumerate}
+\item to pay for fees to use the exchange.
+\item to stake and accumulate value.
+\item to ensure mining incentive.
+\end{enumerate}
+ 
+\subsubsection{Token distribution}	
+\begin{table}[h!]
+	\begin{center}
+		\caption{Token distribution}
+		\label{tab:table1}
+		\begin{tabular}{l|c|r}
+			\textbf{amount} & \textbf{details} \\
+			\hline
+			2.1 Billion Tokens & Supply 1.3B \\
+			\hline
+			\hline
+			5\%  Pre-public crowdsale & 0.000016-0.000020 BTC \\
+			\hline
+			28\% Public crowdsale & 0.000021 BTC+ \\
+			\hline
+			10\% Founders & Time Locked*\\
+			\hline
+			10\% (130M VTX) Prior Work, Team and Advisors & Time Locked*\\
+			\hline
+			35\% Future Decentralized Treasury\\
+			\hline
+			12\% Core Development)\\
+			\hline				
+		\end{tabular}
+	\end{center}
+
+*Logarithmic decay token distribution over 4 years.\\
+\end{table}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\linewidth]{../Pictures/tokendistribution}
+	\caption{}
+	\label{fig:tokendistribution}
+\end{figure}
+
+Pre-sale VTX holders, founders and contributors participate in a proof of non-repudiation process(1 time mining) for token allocations.
+The algorithm used implements a augmented vote for each of the 	modified percentages among VTX members.
+
+%Funds for applications.
+%Decred.
+%POW
+%Hebacus.
+
+\subsubsection{Fee model}
+\subparagraph{Transaction fees\\}
+\begin{enumerate}
+	\item Fees can be collected in any currency.\\
+	\item Fees can be assigned to specific accounts\\
+	\item A small fee collected for general maintenance by developers\\
+\end{enumerate}
+\subparagraph{Lock-in period\\}
+\begin{enumerate}
+	\item User can lock in funds for 24hrs and have a free transaction\\
+	\item User can lock in funds for 24hrs+ and generate VTX \\
+\end{enumerate}
+\subparagraph{Mining fees}
+\begin{enumerate}
+\item A pre-determined amount of VTX is required to participate in the consensus process
+\item A wallet can become a node and earn VTX through mining
+\item From the loopring protocol:
+'When a user creates an order, they specify an amount of VTX to be paid to the ring-miner as a fee, in conjunction with a percentage of the margin (marginSplitPercentage) made on the order that the ring-miner can claim. This is
+called the margin split. The decision of which one to choose
+(fee or margin split) is left to the ring-miner.
+This allows ring-miners to receive a constant income on 
+low margin order-rings for the tradeoff of receiving less 
+income on higher margin order-rings.'
+\begin{enumerate}
+	\item If the margin split is 0, ring-miners will choose the flat VTX fee and are still incentivized.
+	
+	\item If the VTX fee is 0, the income is based on a general linear model.
+	
+	\item When the margin split income is greater than 2x(VTX fee), ring-miners choose the margin split and pay VTX to the user. 
+\end{enumerate}	
+\end{enumerate}
+
+
+\subparagraph{EOSIO}
+If the main EOSIO network scales according to plan and is used for building VDex, the following considerations will be applicable for deploying the exchange:
+\begin{enumerate}
+\item Deploying contract has cost but free to use. 
+\item Developers have to stake eos tokens to deploy contract.
+After the contract is destroyed, the locked tokens are returned.
+\item Dapps must allocate resources to their contracts, memory, cpu, bandwidth. 
+\item The payer of resources is up to the dapp.
+\item Multiple messages in one transaction and multiple accounts can be asigned to the same thread.
+
+\end{enumerate}
+
+\subparagraph{Budget forecast}
+Since the acceptation of decentralized exchanges is not just yet arrived,
+but is deemed to happen, it is safe to say that the value of VTX should increase with demand over a longer period of time, say 5 years.
+
+\subsection{Inter blockchain communication}
+EOSIO is designed to make Inter-Blockchain-Communication (IBC) proofs lightweight. 
+For chains with an insufficient capacity for processing the  IBC proofs and establishing validity, 
+there is the option to degrade to trusted oracles/escrows.
+To directly control other currency transactions with an
+EOSIO based smart contract a trusted mutisig wallet holding the currency 
+in escrow is used to persuade the signing/publishing of the currency 
+transaction based on IBC proofs from the originating chain.	
+\subsection{Security model}
+\subsubsection{Introduction}
+The assumptions made in this section are made from the analysis on gathered information.
+Full security prototyping, testing and securing will occur according to the chart in the \textbf{Timeline} section. 
+The security concerns with the VDex environment can generally be categorized as variants of the following scenarios:
+	\begin{enumerate}
+		\item The attacker executes malicious code within a transaction
+		\item The order of transactions is manipulated
+		\item The timestamp of a block is manipulated
+	\end{enumerate}
+	\subsubsection{General actions}
+		\begin{enumerate}	
+		\item{Filter incoming data} 
+		\begin{enumerate}
+			\item Data from blockchains
+			\item Data received by nodes
+			\item Data received by wallet
+		\end{enumerate}
+		\item {Filter outgoing data}
+		\begin{enumerate}
+			\item Scheduler
+			\item Cancel order
+			\item Commit
+		\end{enumerate}
+	\end{enumerate}
+		\subsubsection{Contract security}
+		\begin{enumerate}
+		\item Keep vast majority of funds in a time-delayed, multi-sig controlled account
+		\item Use multi-sig on the hot wallet with several independent processes/servers double-checking all withdrawals
+		\item Deploy a custom contract that only allows withdrawals to KYC'd accounts and require multi-sig to white-list accounts
+		\item Deploy a custom contract that only accepts deposits of known tokens from KYC'd accounts
+		\item Deploy a custom contract that enforces a mandatory 24-hour waiting period for all withdrawals
+		\item Utilize contracts with hardware wallets for all signing, even automated withdrawals
+		\item Seamless sytem to upgrade broken contracts
+		\item Ability to pause the functionality of a contract 
+		\item Ability to delay an action of a contract	
+		\end{enumerate}
+		\subsubsection{Malware detection by auditing processes}
+		The system will provide insights on rogue processes during the transaction period. 
+		\subsubsection{Random diversification}
+		By using the raft protocol in the election process, a certain level of randomization is aquired.
+		\subsubsection{Multiple factor identification}
+		As in many existing applications, this measure is efficient and already known to the public at large.
+		\subsubsection {Logs}
+			Ensure inspection of logs as control.
+			\begin{enumerate}
+				\item Raft.
+				\item Anomaly detection with AI(Numenta).
+				\item Script investigations of certain non token purchases related addresses.
+			\end{enumerate}
+		\subsubsection{Transaction as Proof of Stake (TaPoS)}
+			Prevents a replay of a transaction on forks that do not include the referenced block signals the network that a particular user and their stake are on a specific fork.
+		\subsubsection{Double spend}
+		A double spend is an attack where the given set of coins is spent in more than one transaction.
+		\begin{enumerate}
+			\item Send two conflicting transactions in rapid succession into the network. This is called a race attack. 
+			\item Pre-mine one transaction into a block and spend the same tokens before releasing the block to invalidate that transaction. This is called a \textit{Finney} attack.
+			\item Own 51+\% of the total computing power of the network to reverse any transaction, as well as have total control of which transactions appear in blocks. This is called a 51\% attack.
+			This is impossible according to EOSIO, Loopring or Raft.
+			If a block producer takes an unreasonable amount of runtime, is not profitable enough, the process is blacklisted.
+		\end{enumerate} 
+
+		\subsubsection{Front running}
+		To prevent someone from copying another node's trade solution, 
+		and have it mined before the next supposed transaction in the pool, 
+		a higher fee per transaction is charged.\\ 
+		The major scheme of front-running in any protocol for
+		order-matching is order-filch: when a front-runner steals
+		one or more orders from a pending order book settlement
+		transaction. EOSIO and loopring both have remedies to this.
+		In both cases keys are not part of the on-chain transaction and thus remain unknown
+		to parties other than the ring-miner itself.
+		Nodes dictate how they manage orders.
+		Each node could potentially use a differnt solution for resolving
+		the order books, inducing yet another level of randomness to promote security.
+			
+			
+		
+		\subsubsection{Forged identities}
+		Malicious users acting as themselves or forged identities 
+		could send a large amount of small orders to attack Loopring
+		nodes. However, most of these orders will be rejected 
+		for not yielding satisfying profit when matched. 
+		Again, nodes should dictate how they manage orders.
+		
+		\subsubsection{Insufficient Balance}
+		Malicious users could sign and spread orders whose order 
+		value is non-zero but whose address actually has zero 
+		balance. Nodes could monitor and notice that some orders 
+		actual balance is zero, update these order states accordingly
+		and then discard them. Nodes must spend time to update
+		the status of an order, but can also choose to minimize the
+		effort by, for example, blacklisting addresses and dropping
+		related orders.
+		
+		\subsubsection{Timing attack}
+		 Timing attacks are a class of cryptographic attacks through which a third-party observer can deduce the content of encrypted data by recording and analyzing the time taken to execute cryptographic algorithms.The randomness of the timeouts in the raft algorithm prevents this.
+		
+		\subsubsection{Other EOSIO security attributes}
+		\begin{enumerate}
+		\item No uses of mutex or locks for on chain parallellisation
+		\item All accounts must only read and write in their own private database
+		\end{enumerate}
+		
+	\subsection{Inter blockchain communication}
+	
+	Transactions sent to a foreign chain will require some facilities on the foreign chain to be trustless. 
+	In the case of two EOSIO based chains, the foreign blockchain will run a smart contract which accepts block headers and incoming transactions from untrusted sources and is able to establish trust in the incoming transactions if they are provably from the originating chain. 
+	For chains with an insufficient capacity for processing the IBC proofs and establishing validity, the options degrade to trusted oracles/escrows.
+	For instance, if you wanted to directly control bitcoin transactions with an EOSIO based smart contract you would need something like a trusted mutisig wallet that holds the bitcoin in escrow and can be 	Is data recoverable by any participant at any tpersuaded to sign/publish the bitcoin transaction based on IBC proofs from the originating chain.
+	
+	\subsection{Multi blockchain}
+	Multi blockchain information can be obtained by aggregating blockchain timelines in parallel order with variance in the frequency where the state is changed, into a comprehensible data structure.
+	This will enable a system to trigger multichain load balancers, transfer states, draw data outputs from smart contracts and trigger execution of transactions on foreign blockchains. 
+	Relative block distance, relative global state and timestamped events are recorded on a
+	global ledger to optimize and confirm transaction before they actually happen on the native chain.
+	This can be used for instance to determine block production coincidence between chains to determine optimal liquidity.
+	
+	\subsection{User experience}
+	\subparagraph{Simulator}
+	In an effort to provide a better and safer user experience, 
+	a VDex trading simulator will be provided with convenient scenarios.
+	\subparagraph{Templates}
+	Easy to use templates for standard transactions will be provided.
+	\subparagraph{Comprehensive and detailed interface}
+	\begin{enumerate}
+		\item Shows the entire market and fluctuations
+		\item Shows Shows wallet: balance and previous transactions.
+		\item Shows detailed history with built in tax calculator.
+		\item Contains toggles for advanced features.		 
+	\end{enumerate}
+	
+	\subsection{True decentralization}
+	 Decentralization is the process by which planning and decision-making are distributed or delegated away from a central, authoritative location or group.
+	 EOSIO is a free, open source, scalable and bug free infrastructure for decentralized applications. EOSIO software tries to ensure a fair and transparent block producer (BP) election process utilizing a democratic delegated proof of stake (DPoS) consensus.s.
+	 A pragmatic understanding of the complexity of the task at hand combined with the unpredictability of human interactions might contribute in accepting the fact that a minimal amount of centralization is required in the initial stages.
+	 After all, the ideas that emanated from Vitalik Buterin and Dan Larimer were once centralized in their head. The criteria of decreasing the \textit{incidences of centralization} with time should be mandatory. VDex will always vote and have direct influence in this direction  
+	 In any case, the exchange itself will possess several mechanisms to promote decentralization. For instance the system for electing nodes when solving order books will not use a shared central clock or (DPoS) but should for example be based on random timeouts for the determination of leaders in an election (RAFT) or using graph theory (DAG) in the case of the PARSEC protocol.
+	 
+	\subsection{System recovery}
+	By ensuring that the latest version of the ledger is always put forward, 
+	the RAFT and PARSEC protocols provides robust system for recovery in case of node failure by design.
+	Security measures are also provided in case of IBC for trading with native blockchains. In the case of non identification of the chain, a fall back occurs to the native rules to then  wait until the next block or default to a short time lock.
+	
+	\subsection{Scalable and modular architecture}
+	To secure the potential for innovation, the principles, 
+	concepts and paradigms proposed by components of the system
+	must favour decoupling of technologies. 
+	Since creating and maintaining distibuted and decentralized systems
+	is very complex we must use different strategies: 
+	\subsubsection{Problem decomposition}
+	Problem solving strategy of breaking a problem up into a set of subproblems, solving each of the subproblems, and then composing a solution to the original problem from the solutions to the subproblems.
+	\subsubsection{Minimize state space}
+	
+	Dynamic programming and templating are hard because of complexity and debugging challenges. 
+	Nesting conditions can also seem unimportant for normal program execution.
+	Special attention to these patterns and details in the initial design will allow to maximize efficiency while allowing for easy replacement or addition of components.   
+	In the context where CPU, bandwidth and RAM are monetized, this is even more important. 
+	
+	\subsubsection{Determine and minimize state replication}
+	
+	State machine replication is a general method for implementing a fault-tolerant service by replicating servers and coordinating client interactions with server replicas. 
+	Replication has a cost and PARSEC has an elegant solution for consensus without replication. 
+
+\section{Risk}
+	The sheer amount of transactions VDex hopes to one day process is 
+	hard to visualize but in the context of the growing interest for decentralized exchanges, more transactions equate with more risk. 
+	Managing the risks of handling currency also proved initially to be a challenge to previous centralized providers.It was a long and arduous process.\\
+	- The evolution of the efficiency of decentralized exchanges should not be expected to be any different but unlike centralized exchanges, dexes have the support of the open source developer community which quickly contribute forward solutions to resolving problems and enhancing the product. \\
+	- The Volentix DAO will ensure VTX counsel nomination within assembly. This structure poses a risk by its novel and sparsely tested approach but ensures solidity by analysis of its theoretical precepts.   
+	
+\section{Timeline}	
+\begin{table}[h!]
+	\begin{center}
+		\caption{VDex R\&D Timeline}
+		\label{tab:table1}
+		\begin{tabular}{l|c|r}
+			\textbf{component} & \textbf{version}&  \textbf{date}  \\
+			\hline
+			Wallet, account and token creation prototype  & n/a & 15/07/2018\\
+			\hline			
+			White paper  & v.0.1 & 08/06/2018\\
+			\hline
+			White paper  & v.0.5 & 15/06/2018\\
+			\hline
+			White paper  & v.0.8  & 15/07/2018\\
+			\hline
+			
+			
+		\end{tabular}
+	\end{center}
+\end{table}
+		
+\section{Conclusion}
+Constructs, concepts and protocols that stand out by their simplicity
+while retaining their effectiveness will help implement a modular
+design which will enhance the system with the capacity to easily add or replace components with the prospects of carefully advancing functionality while 
+implementing micro services.
+Although certain assumptions made in this paper still remain to be verified,
+a very distinctive direction for VDex architecture could be distilled as a highly flexible and modular MVP capable of adaptation and reaction to the changing technological ecosystem.
+For this provisions of the EOSIO operating system and the Loopring and Bancor protocols have been retained. 
+
+
+
+
+
+\bibliographystyle{siam}
+\bibliography{bibl}
+\cite{1}
+\cite{2}
+\cite{3}
+\cite{4}
+\cite{5}
+\cite{6}
+\cite{7}
+\cite{8}
+\cite{9}
+\cite{10}
+\cite{11}
+\cite{12}
+\cite{13}
+\cite{14}
+\cite{15}
+\cite{16}
+\cite{17}
+\cite{18}
+\cite{19}
+%Dash
+%Omni
+%NXT
+%forging formula
+%VertCoin
+%Multiple algos for mining
+%Verge (multiple algos) I2P Tor
+%Bastille
+%Ark
+%Halo
+%unicoin
+%Unocoin
+%Polka Dot
+%Hashgraphs
+
+ 
+\end{document}
