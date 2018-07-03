@@ -265,17 +265,15 @@ settling occurs as such:
 
 \subsubsection{Token creation}
 The \textbf{eosio.token} contract from the EOS.IO framework will be used to issue EOS.IO compliant tokens. 
-VTX will be generated on demand with each request for a transaction. \\
-The purpose of the token is to create liquidity in the VDex exchange.
-All orders values are momentarily converted to VTX to ensure maximum demand and growth of the token.\\ 
+
 
 \subsubsection{Token use}
 
 The token can be used:
 \begin{enumerate}
 \item to pay for fees to use the exchange.
-\item to stake and accumulate value.
-\item to ensure mining incentive.
+\item to stake and accumulate value by purchasing VTX.
+\item to ensure users will partake in order book settlement with their VDex interface in order to decentralize the process.
 \end{enumerate}
  
 \subsubsection{Token distribution}	
@@ -314,8 +312,10 @@ The token can be used:
 	\label{fig:tokendistribution}
 \end{figure}
 
-Pre-sale VTX holders, founders and contributors participate in a proof of non-repudiation process(1 time mining) for token allocations.
-The algorithm used implements a augmented vote for each of the 	modified percentages among VTX members.
+Pre-sale VTX holders can participate in an augmented\cite{21} vote for the justification of token allocations percentages using Venue in a campaign tailored to this purpose. Augmented votes will require voters to take an easy test which proves they acknowledge facts gathered in the Venue campaign concerning the token allocation percentages. Participants to the elaboration of this test grid will compile facts linked to publications gathered regarding this issue and will earn VTX in the process.
+The resulting vote is therefore 'augmented' by ensuring all voters
+vote with the same knowledge regarding this issue.
+
 
 %Funds for applications.
 %Decred.
@@ -356,10 +356,10 @@ income on higher margin order-rings.'
 
 
 \subparagraph{EOS.IO}
-If the main EOS.IO network scales according to plan and is used for building VDex, the following considerations will be applicable for deploying the exchange:
+The following considerations will be applicable for deploying the exchange on the EOS.IO platform
 \begin{enumerate}
-\item Deploying contract has cost but free to use. 
-\item Developers have to stake eos tokens to deploy contract.
+\item Deploying contract has cost but is free to use. 
+\item Developers have to stake EOS.IO tokens to deploy contract.
 After the contract is destroyed, the locked tokens are returned.
 \item Dapps must allocate resources to their contracts, memory, cpu, bandwidth. 
 \item The payer of resources is up to the dapp.
