@@ -90,7 +90,7 @@ The Volentix system consists of five pillars of which VDex is the fulcrum:
 Venue brings users intpo the system.
 \end{enumerate}
 \subsubsection {Verto wallet}
-Verto is a desktop application acting as a multi-currency wallet for VDex. Traders use Verto to understand their holdings and positions, and understand the crypto assets they can trade into. It is the central component for all Volentix platforms and is necessary to grant the user full custody of their private keys for each token they own.
+Verto is a desktop application acting as a multi-currency wallet for VDex. Traders use Verto to understand their holdings and positions, and understand the crypto assets they can trade into. It is the central component for all Volentix platforms and is necessary to let users continually maintain custody of their private keys.
 Verto employs a system of smart contracts to maintain the state between two trading clients.
 VErto gives people confidence their keys are stored safely.
 
@@ -310,10 +310,15 @@ In the case of a FIFO container for the order book,
 settling occurs as such:
 \begin{enumerate}
 	\item Check for subrings
-	\item Load Balancing (Fill rate/stock vailability)
-	\item Rate is equal or less than the original buy rate set by user
-	\item Process cancellations
-	\item Order are scaled according to the history of filled and cancelled amounts 
+	\item Load Balancing (Fill rate/stock availability)
+	\item Rate is equal or less than the original buy rate set by user(Definition of limit orders)
+	\item Process cancellations\\
+	\item Orders are scaled according to the history of filled and cancelled amounts\\
+	A scale order is a type of order that comprises several limit orders at incrementally increasing or decreasing prices. If it is a buy scale order, the limit orders will decrease in price, triggering buys at lower prices as the price starts to fall. With a sell order, the limit orders will increase in price, allowing the trader to take advantage of increasing prices, thereby locking in higher returns.
+	Traders often use scale orders as a strategy for buying or selling large blocks of securities, which could be subject to extra price volatility as the market reacts to the volume of the transaction if the whole block was bought or sold in a single market transaction. Scale orders allow traders to split a larger transaction into smaller volumes, which limits the bad aspects of market volatility and protects profits.
+	
+	
+	 
 \end{enumerate}	
 	
 
