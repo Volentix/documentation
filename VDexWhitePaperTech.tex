@@ -22,7 +22,7 @@
 }
 
 %opening
-\title{VDex White Paper v0.6}
+\title{VDex White Paper v0.75}
 \author{
 		The Volentix Labs Team\\
 	\texttt{info@volentixlabs.com}
@@ -51,7 +51,7 @@ ease of use and multi asset support, this low friction peer-to-peer exchange
 abides by open standards and ensures a harmonious and seamless flow among 
 decentralized applications. This collection of smart EOS.IO contracts is publicly accessible 
 and contain easy to use options for security, anonymity, speed of payment, liquidity and profit margin.
-Volentix is a DAO and its governance allows for non disruptive and collaborative action among VTX holders towards the growth and stability of the VTX token.
+Volentix is a DAO and its governance allows for non disptive and collaborative action among VTX holders towards the growth and stability of the VTX token.
 \end{abstract}
 \section{Introduction}
 
@@ -69,19 +69,11 @@ with EOS.IO's \textbf{\textit{cleos}} command line through functional python tes
 
 \section{Volentix}	
 The Volentix system consists of five pillars of which VDex is the fulcrum:
-\begin{figure}
-	\centering
-	\includegraphics[width=0.7\linewidth]{"../Documents/Drawing 2"}
-	\caption{The Volentix ecosystem}
-	\label{fig:drawing-2}
-\end{figure}
-\subsubsection {Venue is an app for tracking signature campaigns.\\}
 
-	Venue is a bounty distribution platform.
-	Volentix will post bounties and campaigns to Venue for work needed.
-	(ex: example, fixing bugs, creating content) Venue provides real time metrics 
-	on VTX rewards earned by participants. 
-	Venue brings users into the system with VTX rewards.
+\subsection {Venue is an app for tracking signature campaigns.\\}
+
+	Venue is a dynamic community platform. The first iteration of Venue acts as a distribution platform. VTX rewards can be earned in exchange for participating in community building campaigns, submitting bug fixes or claiming bounties. The purpose of Venue is to facilitate distribution of VTX and facilitate greater awareness of the Volentix Project. Included in the webapp are leaderboards and live metrics showing user participation. A series of signature campaigns are due to launch on the forum \textit{https://bitcointalk.org/} in Mid July 2018. Visit \textbf{\textit{https://venue.volentix.io}} for more information. 
+	
 
 \subsection {Verto wallet}
 Verto is multi-currency wallet for VDex. It is the central component for all Volentix platforms and is necessary to let users continually maintain custody of their private keys.
@@ -95,30 +87,21 @@ Vespucci data sources consist of data presently scattered among blockchain explo
 historic trading records, forum sentiment analysis, trading trends, developer activity and plan analysis.
 digital asset distribution and governance information, terms and conditions and current and historic address balances.
 
-%\begin{figure}
-%	\centering
-%	\textbf{The Volentix Ecosystem}
-%	\includegraphics[width=0.7\linewidth]{"../Desktop/volentix ecosystem"}
-%	\caption{}
-%	\label{fig:volentix-ecosystem}
-%\end{figure}
-
 
 
 
 \subsection {VDex}
 
-VDex will provide high-quality exchange services directly from the user's wallet.
-Both public and private keys are maintained locally by the wallet and liquidity is provided by the network itself, by way of users signalling their desire to make a particular trade. 
-The swapping of crypto assets does not involve the temporary custody of the tokens by a central operator and therefore no market manipulation can occur.
-There are no risks of coins getting hacked and no risk regarding laws governing the exchange where the account is held.
-VDex allows users to trade crypto assets with other users without losing custody of the tokens they hold. 
-Furthermore, VDex allows digital tokens to remain on the originator's wallet until all required transactions are completed. VDex supports trading in multiple cryptocurrencies, and operates with any blockchain.
-
-
+VDex will provide crypto currency exchange services directly from the user's wallet where both public and private keys are locally managed.
+The swapping of crypto assets does not involve the temporary custody of the tokens by a central operator, therefore VDex also allows users to trade crypto assets with others without losing custody of the tokens they hold. 
+Furthermore, VDex allows digital tokens to remain on the originator's wallet until all required transactions are completed. VDex supports trading in multiple cryptocurrencies and VDex is the host to multiple liquidity pools to accomodate different types of markets.
+The Verto wallet should be host to the native contracts or scripts it intends to trade in, the simplest operations being done with an atomic swap. 
 
 									
-\subsection{Architecture}
+\section{Architecture}
+	
+	\subsubsection{Overview}
+	Cross chain, inter wallet transactions are done by providing wallets with the contracts or scripts to transact in any cryptocurrency. The transaction between Bob and Alice entails Bob and Alice sending funds toward each other's accounts using these provided contracts best described in the original atomic swap paper.\cite{22} In this case, contracts have guarantees toward each other by the means of time locks.The various means of ensuring collateral for a particular transaction or augmenting liquidity of a network can be done by various means described later in this document.
 	
 	\subsubsection{Operating system}
 	EOS.IO is an operating system-like framework upon which decentralized applications can be built. The software provides accounts, authentication, databases, asynchronous communication and scheduling across clusters. Components and protocols are already built into the platform and just a subset can be used to satisfy VDex requirements. VDex will initially benefit from the most standard features offered by EOS.IO such as account and wallet creation and the recovery of stolen keys but will subsequently have to implement the paradigms and patterns suggested by most protocols for the creation of decentralized exchanges through its contracts and provided tools:	\cite{3}\\
@@ -159,10 +142,6 @@ Furthermore, VDex allows digital tokens to remain on the originator's wallet unt
 	The \textit{Standardized Service Contract} design principle advocates that the service contracts be based on standardized data models. Analysis is done on the service inventory blueprint to find out the commonly occurring business documents that are exchanged between services. These business documents are then modeled in a standardized manner. The Canonical Schema pattern reduces the need for the application of the data model transformation design pattern.
 	\cite{1}
 	
-	
-
-
-	
 		
 \end{enumerate}
 	 
@@ -200,14 +179,14 @@ Furthermore, VDex allows digital tokens to remain on the originator's wallet unt
 		\item Toggles between these protocols and atomic swaps(HTLC) according to the Vespucci analysis on the VDex network.
 		\end{enumerate}
 	
-	\subsubsection{Hashed timelock contracts}
+	\subsubsection{Hashed timelock contracts (Atomic Swaps)}
 	A Hashed Timelock Contract (HTLC)\cite{22} is a type of smart contract enabling the implementation of time-bound transactions.
 	Users will be offered a variable lock in period for their transations choosing or not
 	to lock in their funds for a slightly greater time than the slowest blockchain in exchange for a discount on the transaction.
 	
 	\subsection{Network Topology}
 	\subsubsection{Nodes}
-	Nodes are the endpoints with which users will propagate their orders to VDex. If a user chooses, their wallet can become a node one who can, through an election or designation process, settle the order book for that iteration.   
+	Nodes are the endpoints to input orders to VDex. If a user chooses, their wallet can become a node one who can, through an election or designation process, settle the order book for that iteration.   
 	Hence, any wallet with sufficient funds and posessing a good track record with VDex can be used as node.\
 	Nodes are the endpoints of the VDex network.
 	Their function is to:\
@@ -223,7 +202,8 @@ Furthermore, VDex allows digital tokens to remain on the originator's wallet unt
 	\subsubsection{Aggregators}
 	
 	The VDex aggregators are dedicated Volentix servers for simulator and security purposes. 
-	One of their functions is to pull logs and order book data from nodes into sparse distributed representations for hierarchical temporal memory as intrusions \cite{24} analysis for detecting anomalies in the system such. The aggregators will also be host to other components such as a metachain ledger\cite{20}and blockchain scrapers from which the Vespucci Analysis Engine will elaborate scenarios and build user advice.
+	One of their functions is to pull logs and order book data from nodes into sparse distributed representations for hierarchical temporal memory as intrusions \cite{24} analysis for detecting anomalies in the system such. The aggregators will also be host to other components such as a metachain  ledger\cite{20}and blockchain scrapers from which the.
+	 
 	
 	\subsubsection{Latency}	
 	EOS.IO has low latency block confirmation (0.5 seconds).\cite{3}
@@ -332,7 +312,7 @@ Incentives for core team. These are bonuses given throughout the project after m
 		\caption{Token distribution}
 		\label{tab:table1}
 		\begin{tabular}{l|c|r}
-			\textbf{Percentage of issued tokens} & \textbf{price} & \textbf{Timelock*} \\
+			\textbf{Percentage of issued tokens} & \textbf{price} & \textbf{Timelock} \\
 		
 			\hline
 			35\% Future Decentralized Treasury & & \\
@@ -353,15 +333,8 @@ Incentives for core team. These are bonuses given throughout the project after m
 		\end{tabular}
 	\end{center}
 
-*Logarithmic decay token distribution over 4 years.\\
-\end{table}
 
-\begin{figure}
-	\centering
-	\includegraphics[width=0.7\linewidth]{../Pictures/tokendistribution}
-	\caption{}
-	\label{fig:tokendistribution}
-\end{figure}
+\end{table}
 
 \subparagraph{Justification of token crowdsale vote}
 Pre-sale VTX holders, founders and the core team will be given the opportunity to participate in an \textbf{\textit{augmented} \textit{vote}}\cite{21} to know if the Volentix community wants a crowdsale or not. Augmented votes will require voters to take an easy test which proves they acknowledge facts concerning crowdsales. Participants to the elaboration of this test grid will compile facts linked to publications regarding crowdsales and will earn VTX in the process. The resulting vote will therefore be \textit{\textbf{augmented}} by ensuring all voters vote with the same established knowledge regarding this issue.  
