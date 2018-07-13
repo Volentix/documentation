@@ -22,7 +22,7 @@
 }
 
 %opening
-\title{VDex White Paper v0.75}
+\title{VDex White Paper v0.76}
 \author{
 		The Volentix Labs Team\\
 	\texttt{info@volentixlabs.com}
@@ -41,7 +41,7 @@
 {\tiny Without permission, anyone may use, reproduce or distribute any material in this white paper for non-commercial and educational use (i.e., other than for a fee or for commercial purposes) provided that the original source and the applicable copyright notice are cited.
 
 DISCLAIMER: This VDex White Paper  is for information purposes only. The authors do not guarantee the accuracy of or the conclusions reached in this white paper, and this white paper is provided 'as is'. 
-Volentix Labs do not make and expressly disclaims all representations and warranties, express, implied, statutory or otherwise, whatsoever, including, but not limited to: (i) warranties of merchantability, fitness for a particular purpose, suitability, usage, title or non infringement; (ii) that the contents of this white paper are free from error; and (iii) that such contents will not infringe third-party rights. Volentix Labs and its affiliates shall have no liability for damages of any kind arising out of the use, reference to, or reliance on this white paper or any of the content contained herein, even if advised of the possibility of such damages. In no event will block.one or its affiliates be liable to any person or entity for any damages, losses, liabilities, costs or expenses of any kind, whether direct or indirect, consequential, compensatory, incidental, actual, exemplary, punitive or special for the use of, reference to, or reliance on this white paper or any of the content contained herein, including, without limitation, any loss of business, revenues, profits, data, use, goodwill or other intangible losses.}
+Volentix Labs do not make and expressly disclaims all representations and warranties, express, implied, statutory or otherwise, whatsoever, including, but not limited to: (i) warranties of merchantability, fitness for a particular purpose, suitability, usage, title or non infringement; (ii) that the contents of this white paper are free from error; and (iii) that such contents will not infringe third-party rights. Volentix Labs and its affiliates shall have no liability for damages of any kind arising out of the use, reference to, or reliance on this white paper or any of the content contained herein, even if advised of the possibility of such damages. In no event will Volentix or its affiliates be liable to any person or entity for any damages, losses, liabilities, costs or expenses of any kind, whether direct or indirect, consequential, compensatory, incidental, actual, exemplary, punitive or special for the use of, reference to, or reliance on this white paper or any of the content contained herein, including, without limitation, any loss of business, revenues, profits, data, use, goodwill or other intangible losses.}
 
 \begin{abstract}
 
@@ -50,7 +50,7 @@ Using some of the most recent paradigms and established protocols for security,
 ease of use and multi asset support, this low friction peer-to-peer exchange 
 abides by open standards and ensures a harmonious and seamless flow among 
 decentralized applications. This collection of smart EOS.IO contracts is publicly accessible 
-and contain easy to use options for security, anonymity, speed of payment, liquidity and profit margin.
+and contains easy to use options for security, anonymity, speed of payment, liquidity and profit margin.
 Volentix is a DAO and its governance allows for non disptive and collaborative action among VTX holders towards the growth and stability of the VTX token.
 \end{abstract}
 \section{Introduction}
@@ -70,9 +70,9 @@ with EOS.IO's \textbf{\textit{cleos}} command line through functional python tes
 \section{Volentix}	
 The Volentix system consists of five pillars of which VDex is the fulcrum:
 
-\subsection {Venue is an app for tracking signature campaigns.\\}
+\subsection {Venue is a dynamic community platform. \\}
 
-	Venue is a dynamic community platform. The first iteration of Venue acts as a distribution platform. VTX rewards can be earned in exchange for participating in community building campaigns, submitting bug fixes or claiming bounties. The purpose of Venue is to facilitate distribution of VTX and facilitate greater awareness of the Volentix Project. Included in the webapp are leaderboards and live metrics showing user participation. A series of signature campaigns are due to launch on the forum \textit{https://bitcointalk.org/} in Mid July 2018. Visit \textbf{\textit{https://venue.volentix.io}} for more information. 
+The first iteration of Venue acts as a distribution platform. VTX rewards can be earned in exchange for participating in community building campaigns, submitting bug fixes or claiming bounties. The purpose of Venue is to facilitate distribution of VTX and facilitate greater awareness of the Volentix Project. Included in the webapp are leaderboards and live metrics showing user participation. A series of signature campaigns are due to launch on the forum \textit{https://bitcointalk.org/} in Mid July 2018. Visit \textbf{\textit{https://venue.volentix.io}} for more information. 
 	
 
 \subsection {Verto wallet}
@@ -101,7 +101,7 @@ The Verto wallet should be host to the native contracts or scripts it intends to
 \section{Architecture}
 	
 	\subsubsection{Overview}
-	Cross chain, inter wallet transactions are done by providing wallets with the contracts or scripts to transact in any cryptocurrency. The transaction between Bob and Alice entails Bob and Alice sending funds toward each other's accounts using these provided contracts best described in the original atomic swap paper.\cite{22} In this case, contracts have guarantees toward each other by the means of time locks.The various means of ensuring collateral for a particular transaction or augmenting liquidity of a network can be done by various means described later in this document.
+	Cross chain, inter wallet transactions are done by providing wallets with the contracts or scripts to transact in any cryptocurrency. The transaction between Bob and Alice entails Bob and Alice sending funds toward each other's accounts using these provided contracts best described in the original atomic swap paper.\cite{22} In this case, contracts have guarantees toward each other by the means of time locks. The various means of ensuring collateral for a particular transaction or augmenting liquidity of a network can be done by various means described later in this document.
 	
 	\subsubsection{Operating system}
 	EOS.IO is an operating system-like framework upon which decentralized applications can be built. The software provides accounts, authentication, databases, asynchronous communication and scheduling across clusters. Components and protocols are already built into the platform and just a subset can be used to satisfy VDex requirements. VDex will initially benefit from the most standard features offered by EOS.IO such as account and wallet creation and the recovery of stolen keys but will subsequently have to implement the paradigms and patterns suggested by most protocols for the creation of decentralized exchanges through its contracts and provided tools:	\cite{3}\\
