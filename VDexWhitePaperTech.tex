@@ -43,109 +43,111 @@ Volentix Labs do not make and expressly disclaims all representations and warran
 
 \begin{abstract}
 
-Introducing VDex, a decentralized exchange with the user and community in mind. 
+We introduce VDex, a decentralized exchange with the user and community in mind. 
 Using some of the most recent paradigms and established protocols for security, 
 ease of use and multi asset support, this low friction peer-to-peer exchange 
 abides by open standards and ensures a harmonious and seamless flow among 
-decentralized applications. This collection of smart EOS.IO contracts is publicly accessible 
-and contains easy to use options for security, anonymity, speed of payment, liquidity and profit margin.
+decentralized applications. Built with a collection of smart EOS.IO contracts, 
+it contains easy to use options for security, anonymity, speed of payment, liquidity and profit margin.
 Volentix is a DAO and its governance allows for non disptive and collaborative action among VTX holders towards the growth and stability of the VTX token.
 \end{abstract}
 \section{Introduction}
 
-VDex is a distributed exchange that will provide a highly customizable environment for speed, cost, anonymity and security within the scope of scalability. 
-Power users will feel enabled with the freedom to choose and thrive. 
-Equally, new users will feel welcomed and secure with the stability of decentralized self regulation. 
-The sustainability of the product will reside in a flexible architecture 
-allowing for the migration of the best practices of 2nd generation blockchain applications.  
+VDex is a distributed exchange that will provide a highly customizable environment for speed, cost, anonymity, security, and scalability. 
+Power users will feel enabled with the freedom to choose and thrive, 
+while new users will feel welcomed and free from the risks inherent in a centralized system. 
+The growth of the product will reside in a flexible architecture 
+able to adopt the best practices of 2nd generation blockchain applications.  
 The task of building VDex mainly resides in successfully merging
 and integrating today's best protocols, paradigms and patterns to match the 
 Volentix requirements on top of the EOS.IO decentralized operating system.
-To provide a flexible modular product, developers will needed an environment that serves its purpose without burdening design with redundant complexity. 
+% Suggest removing
+% To provide a flexible modular product, developers will need an environment that serves its purpose without burdening design with redundant complexity. 
+%
  	
 \section{Methodology}
 
-All assumptions made in this paper will be verified by prototyping
-with EOS.IO's \textbf{\textit{cleos}} command line through functional python testing. This software resides at: https://github.com/Volentix/ezeos
+All assumptions made in this paper will be verified by prototyping with our custom EZEOS software, built
+with EOS.IO's \textbf{\textit{cleos}} command line tools. This software resides at: https://github.com/Volentix/ezeos
 
 \section{Volentix}	
-The Volentix system consists of five pillars of which VDex is the fulcrum:
+The Volentix system consists of four pillars with VDex as its flagship:
 
-\subsection {Venue is a dynamic community platform. \\}
+\subsection {Venue dynamic community platform}
 
-The first iteration of Venue acts as a distribution platform. 
-VTX rewards can be earned in exchange for participating in community building campaigns, submitting bug fixes or claiming bounties. 
-The purpose of Venue is to facilitate distribution of VTX and facilitate greater awareness of the Volentix Project. 
-Included in the webapp are leaderboards and live metrics showing user participation. 
-A series of signature campaigns are due to launch on the forum \textit{https://bitcointalk.org/} in Mid July 2018. 
+Venue is a platform which brings together members of the Volentix community 
+and to facilitate distribution of VTX and bring greater awareness to the Volentix Project. 
+
+The first iteration of Venue is a platform for distributing VTX. 
+VTX rewards can be earned in exchange for participating in community building campaigns, submitting bug fixes, or claiming bounties. 
+Included in this webapp are leaderboards and live metrics showing user participation. 
+The first signature campaign was launched on the \textit{https://bitcointalk.org/} forum on July 13th, 2018. 
 Visit \textbf{\textit{https://venue.volentix.io}} for more information. 
 	
 
 \subsection {Verto wallet}
 Verto is multi-currency wallet for VDex. 
-It is the central component for all Volentix platforms and is necessary to let users continually maintain custody of their private keys.
-Verto employs a system of smart contracts to maintain the state between two trading clients.
-Verto gives people confidence their keys are stored safely.
+It is the central component for all Volentix platforms and is necessary to ensure users continually and safely maintain custody of their private keys.
+Verto employs a system of smart contracts to maintain the state between two trading clients, the simplest operations being done with atomic swaps. 
 
 \subsection {Vespucci analytical engine}
-Vespucci is an application that provides information and analytics about tradeable digital assets. 
-It is also a tool to graph and compare tradeable digital assets. 
-Vespucci increases liquidity by boosting user confidence .
-Vespucci data sources consist of data presently scattered among blockchain explorer sites and chat rooms,
-historic trading records, forum sentiment analysis, trading trends, developer activity and plan analysis.
-digital asset distribution and governance information, terms and conditions and current and historic address balances.
+Vespucci is an application that provides information and analytics about tradeable digital assets, 
+as well as a tool to graph and compare tradeable digital assets. 
+Vespucci increases liquidity by boosting user confidence and bringing more users to the Volentix platform.
+Vespucci aggregates data presently scattered amongst blockchain explorer sites, chat rooms, and websites, 
+as well as using historic trading records, forum sentiment and plan analysis, trading trends, developer activity,
+digital asset distribution and governance information, terms and conditions, and historic address balances.
 
 
 
 
 \subsection {VDex}
 
-VDex will provide crypto currency exchange services directly from the user's wallet where both public and private keys are locally managed.
+VDex will provide crypto currency exchange services directly from the user's Verto wallet where both public and private keys are locally managed.
 The swapping of crypto assets does not involve the temporary custody of the tokens by a central operator, 
 therefore VDex also allows users to trade crypto assets with others without losing custody of the tokens they hold. 
 Furthermore, VDex allows digital tokens to remain on the originator's wallet until all required transactions are completed. 
-VDex supports trading in multiple cryptocurrencies and VDex is the host to multiple liquidity pools to accomodate different types of markets.
-The Verto wallet should be host to the native contracts or scripts it intends to trade in, the simplest operations being done with an atomic swap. 
+VDex supports trading in many cryptocurrencies and hosts multiple liquidity pools to accomodate different types of markets.
 
 
 									
 \section{Architecture}
 	
 	\subsubsection{Overview}
-	Cross chain, inter wallet transactions are done by providing wallets with the contracts or scripts to transact in any cryptocurrency. 
-	The transaction between Bob and Alice entails Bob and Alice sending funds toward each other's accounts 
+	Cross-chain, inter-wallet transactions are done by providing wallets with the contracts or scripts to transact in any cryptocurrency. 
+	The transaction between Bob and Alice involves each sending funds toward the other's accounts 
 	using these provided contracts best described in the original atomic swap paper.\cite{22} 
-	In this case, contracts have guarantees toward each other by the means of shared secrets within timeouts or refund occurs. 
+	These contracts have guarantees toward each other by the means of shared secrets within timeouts or refund occurs. 
 	The various means of ensuring collateral for a particular transaction or augmenting liquidity of a network 
-	can be done by various other means described later in this document.
+	will be described later in this document.
   
 	\subsubsection{Operating system}
 	EOS.IO is an operating system-like framework upon which decentralized applications can be built. 
-	The software provides accounts, authentication, databases, asynchronous communication and scheduling across clusters. 
-	Components and protocols are already built into the platform and just a subset can be used to satisfy VDex requirements. 
-	VDex will initially benefit from the most standard features offered by EOS.IO such as account and wallet creation 
-	and the recovery of stolen keys but will subsequently have to implement the paradigms and patterns suggested by most protocols 
-	for the creation of decentralized exchanges through its contracts and provided tools:	\cite{3}\\
+	The software provides accounts, authentication, databases, asynchronous communication, and scheduling across clusters. 
+	Components and protocols are already built into the platform, and just a subset can be used to satisfy VDex requirements. 
+	VDex will initially benefit from the standard features offered by EOS.IO such as account and wallet creation 
+	and the recovery of stolen keys, but will subsequently implement the protocols 
+	for the creation of decentralized exchanges through its contracts and provided tools	\cite{3}\\
   
 	\begin{enumerate}
 					
 			\item \textbf{Context Free Actions} \\
 		Most of the scalability techniques proposed by Ethereum (Sharding, Raiden, Plasma, State Channels) 
-		become much more efficient, parallelizable, and practical while also ensuring efficient inter-blockchain communication and unlimited scalability.
+		become much more efficient, parallelizable, and practical while also ensuring speedy inter-blockchain communication and unlimited scalability.
 		A Context Free Action involves computations that depend only on transaction data, but not upon the blockchain state.
 		ex: Parallel processed signature verifications\\
 		
 		\item\textbf{ Binary/JSON conversion} \\
-		 The contracts provide the human readability of JSON and the efficiency of binary. \\
+		 EOS contracts combine the human readability of JSON with the efficiency of binary. \\
 	
 		\item \textbf{Parallelisation and optimisation\\ } 
 		Separating authentification from application allows faster transaction times and increases bandwidth.
 		EOS.IO blocks are produced every 500 ms.
 		
 	\item \textbf{Web Assembly(WASM)}   \\
-	Web assembly has the highest performance for web application while also providing sandboxing to secure applications.
-	This will provide VDex with network access restrictions,
-	filesystem namespace restrictions, enforced rule-based execution and better control over what processes are spawned.
+	Web assembly enables high-performing web applications while also secures each applicatios in its own sandboxe.
+	This will provide VDex with network access and
+	filesystem namespace restrictions, enforced rule-based execution, and better control over what processes are spawned.
 	
 	\item \textbf{Rust/C++ contracts\\}
 	At the time of this writing,
@@ -153,7 +155,7 @@ The Verto wallet should be host to the native contracts or scripts it intends to
 	C++ is a much more mature language than for instance Solidity used for Ethereum contracts.
 	It also has better debugging support as well as libraries that have been tested over the years and provide reliable functionality. 
 	The EOS codebase has also very heavy usage of templates.
-	For example, C++ allows us to use templates and operator overloading to define a runtime cost-free validation of units.
+	For example, C++ allows the use of templates and operator overloading to define a runtime cost-free validation of units.
 	Managing memory is much easier building smart contracts because the
 	program reinitializes to clean state at the start of every message. Furthermore, there is rarely a need to implement dynamic memory allocation. 
 	The WebAssembly framework will automatically reject any transaction addressing memory wrong.
@@ -162,10 +164,10 @@ The Verto wallet should be host to the native contracts or scripts it intends to
 	 	
 	\item \textbf{Schema defined messages and database} \\
 	Service contracts are standardized to guarantee a baseline measure of interoperability associated with the harmonization of data models.
-	The \textit{Standardized Service Contract} design principle advocates that the service contracts be based on standardized data models. 
+	The \textit{Standardized Service Contract} design principle advocates that service contracts be based on standardized data models. 
 	Analysis is done on the service inventory blueprint to find out the commonly occurring business documents that are exchanged between services. 
 	These business documents are then modeled in a standardized manner. 
-	The Canonical Schema pattern reduces the need for the application of the data model transformation design pattern.
+	The Canonical Schema pattern reduces the need for application of the data model transformation design pattern.
 	\cite{1}
 	
 		
@@ -178,19 +180,19 @@ The Verto wallet should be host to the native contracts or scripts it intends to
 	\cite{2}
 	Every node will have an identical copy of this data, so it can be safely used in a smart contract computation.
 	Oracles push the data onto the blockchain rather than the smart contract pulling the information.
-	Most reading the of data is done via polling \textbf{nodeos} (the blockchain instance) to monitors the blockchain's state 
+	Most reading of the data is done via polling \textbf{nodeos} (the blockchain instance) to monitors the blockchain's state 
 	and performs certain actions in response. 
 	
 	
 	\subsubsection{Side Chains}
-	In EOS.IO, issuing tokens is a process a which creates sidechain. 
+	In EOS.IO, issuing tokens is a process which creates a sidechain. 
 	Sidechains are emerging mechanisms that allow tokens and other digital assets from one blockchain 
 	to be securely used in a separate blockchain and then be moved back to the original blockchain if needed. 
 	There can be multiple side chains where different tasks are distributed accordingly for improving the efficiency of processing. 	
 	For inter-blockchain communication, the EOS.IO protocol creates a TCP like communication channel between chains to evaluate proofs.
-	For each shard (a unit of parallelizable execution in a cycle) a balanced merkle tree is constructed of these action commitments 
-	to generate a temporary shared merkle root. 
-	This is done for speed of parallel computation. 
+	For each shard (a unit of parallelizable execution in a cycle), a balanced merkle tree is constructed of these action commitments 
+	to generate a temporary shared merkle root; 
+	this is done for speed of parallel computation. 
 	The block header contains the root of a balanced merkle tree whose leaves are the roots of these individual shard merkle trees.
 	\cite{3} 
 
@@ -217,14 +219,11 @@ The Verto wallet should be host to the native contracts or scripts it intends to
 	
 	\subsubsection{Hashed timelock contracts (Atomic Swaps)}
 	A Hashed Timelock Contract (HTLC)\cite{22} is a type of smart contract enabling the implementation of time-bound transactions.
-	Users will be offered a variable lock in period for their transations choosing or not
-	to lock in their funds for a slightly greater time than the slowest blockchain in exchange for a discount on the transaction.
+	Users will be offered a variable lock-in period for their transations, 
+	with a discount on the transaction fee in exchange for choosing a slightly greater lock-in period.
 	
 	\subsection{Network Topology}
 	\subsubsection{Nodes}
-	Nodes are the endpoints to input orders to VDex. If a user chooses, their wallet can become a node one who can, 
-	through an election or designation process, settle the order book for that iteration.   
-	Hence, any wallet with sufficient funds and posessing a good track record with VDex can be used as node.\
 	Nodes are the endpoints of the VDex network.
 	Their function is to:\
 	\begin{enumerate}
@@ -235,23 +234,26 @@ The Verto wallet should be host to the native contracts or scripts it intends to
 		\item Assign timeouts for the \textbf{Raft} Protocol.\
 		\item Initiate contract for orders that have been filled.
 	\end{enumerate}
+
+Nodes earn a portion of the fee for each transaction.
+If a user has sufficient funds and posessing a good track record, their Verto wallet can act as a node.
 	
 	\subsubsection{Aggregators}
 	
 	The VDex aggregators are dedicated Volentix servers for simulator and security purposes. 
 	One of their functions is to pull logs and order book data from nodes into sparse distributed representations for hierarchical temporal memory
-	as intrusions \cite{24} analysis for detecting anomalies in the system such. 
-	The aggregators will also be host to other components such as a metachain  ledger\cite{20}and blockchain scrapers from which the.
+	as intrusion \cite{24} analysis for detecting anomalies in the system such. 
+	The aggregators will also be host to other components such as metachai  ledgers\cite{20}and blockchain scrapers.
 	 
 	
 	\subsubsection{Latency}	
 	EOS.IO has low latency block confirmation (0.5 seconds).\cite{3}
-	This latency can be provided if the currencies being traded are issued from blockchains that are equally fast, other wise, 
-	the transaction is as fast as the slowest block chain.
-	For example a bitcoin block takes 9 minutes to mine at time of this writing. 
+	This latency can be provided if the currencies being traded are issued from blockchains that are equally fast, 
+	otherwise the transaction is as fast as the slowest block chain
+	(for example a bitcoin block takes 9 minutes to mine at time of this writing). 
 	On completion of the transaction, a transaction receipt is generated. 
-	Receiving a transaction hash does not mean that the transaction has been confirmed, it only means that the node accepted it without error, 
-	which also means that there is a high probability other producers will accept it. 
+	Receiving a transaction hash does not mean that the transaction has been confirmed; it means only that a node accepted it without error, 
+	although there is also a high probability other producers will accept it. 
 
 \subsection{OrderBook}
 An order book is the list of orders that VDex will use to record the interest of buyers and sellers. 
@@ -262,12 +264,12 @@ With this in mind, containers provided by EOS.IO can be used for optimal perform
 \subsubsection{Data structures}
 \begin{enumerate}
 \item Loopring FIFO\
-	First in first out circular buffer, as suggested by the protocol. 
+	First-in first-out circular buffer, as suggested by the protocol. 
 	Nodes can design their order books in any number of ways to display and match a user's order. 
 	Follows an OTC model, where limit orders are positioned based on price alone.
 	\cite{7}  
 \item EOS.IO persitence API
-	The order book will take advantage of the powerful multi index container shared among nodes through the same EOS.IO account.
+	The order book will take advantage of the powerful multi-index container shared among nodes through the same EOS.IO account.
 \end{enumerate}
 %\subsubsection{Operations}
 %Iterating over the orderbook container:
@@ -280,7 +282,7 @@ With this in mind, containers provided by EOS.IO can be used for optimal perform
 %\end{enumerate}
 
 \subsubsection{On-Chain order book}
-An on-chain order book is a record of offers residing on the wallet(node)chosen to settle
+An on-chain order book is a record of offers residing on the wallet (node) chosen to settle
 the order book. It resides in a persistent database on each node subscribing 
 to the same account as all the other nodes.
 
@@ -292,7 +294,7 @@ Residing on the aggregator, offline order books will serve for simulator and sec
 To ensure decentralization, nodes will take turns to settle the Order Book. 
 The settling node must be designated by the protocol and all order book entries from all nodes must be available to the settling nodes. 
 The RAFT\cite{18} and PARSEC\cite{23} protocols offer elegant and simple solutions. 
-The concepts of RAFT are simple to implement and have been around since the the time of PAXOS\cite{24} 
+The concepts of RAFT are easy to implement and have been around since the time of PAXOS\cite{24}, 
 while PARSEC is fairly recent but more efficient, using directed acyclic graphs, eliminating the need for copying logs.
 
 \subsection{Order settlement}
@@ -300,18 +302,17 @@ In the case of a FIFO container for the order book,
 settling occurs as such:
 \begin{enumerate}
 	\item Check for subrings
-	this operation promotes security by checking the oprder of the ring is the same as the initial one.
+	this operation promotes security by checking the order of the ring is the same as the initial one.
 	\item Load Balancing (Fill rate/stock availability)
-	\item Rate is equal or less than the original buy rate set by user(Definition of limit orders)
+	\item Rate is equal or less than the original buy rate set by user (Definition of limit orders)
 	\item Process cancellations\\
 	\item Orders are scaled according to the history of filled and cancelled amounts\\	 
 \end{enumerate}	
 	
 
 \subsection{VTX}
-VTX is both the cryptocurrency used on the vDex exchange. 
-VTX can be used in the five pillars of the Volentix system.
-
+VTX is the cryptocurrency used on the vDex exchange. 
+It can be used within all of the four pillars of the Volentix system:
 \begin{enumerate}
 \item To pay transaction fees on the VDex.
 \item To invest. 
@@ -337,8 +338,8 @@ VTX can be used in the five pillars of the Volentix system.
 
 
 \subsubsection{Token creation}
-The \textbf{eosio.token} contract from the EOS.IO framework will be used to issue 2.1 Billion Tokens EOS.IO compliant tokens 
-with a supply of 1.3 Billion.
+The \textbf{eosio.token} contract from the EOS.IO framework will be used to issue 2.1 billion EOS.IO compliant tokens 
+with a supply of 1.3 billion.
  
  
 \subsubsection{Initial Token offering}
@@ -392,11 +393,11 @@ Pre-sale VTX holders, founders and the core team will be given the opportunity t
 to know if the Volentix community wants a crowdsale or not. 
 Augmented votes will require voters to take an easy test which proves they acknowledge facts concerning crowdsales. 
 Participants to the elaboration of this test grid will compile facts linked to publications regarding crowdsales and will earn VTX in the process. 
-The resulting vote will therefore be \textit{\textbf{augmented}} by ensuring all voters vote with the same established knowledge regarding this issue.  
+The resulting vote will therefore be \textit{\textbf{augmented}} by ensuring all voters have the same established knowledge regarding this issue.  
 
 \subparagraph{Multi signature account}
 The raised funds will be deposited to a multi signature account owned by the founders 
-that will only be only be accessed with the consent of at least two of three signees.
+that can only be accessed with the consent of at least two of three signees.
 
 
 \subsubsection{Fee model}
@@ -409,8 +410,8 @@ that will only be only be accessed with the consent of at least two of three sig
 \subparagraph{Lock-in period fee\\}
 	A Hashed Timelock Contract (HTLC)\cite{22} is a type of smart contract enabling the implementation of time-bound transactions.
 \begin{enumerate}
-	\item User can lock in funds for 24hrs and have a free transaction\\
-	\item User can lock in funds for 24hrs+ and generate VTX \\
+	\item Users can lock in funds for 24hrs and have a free transaction\\
+	\item Users can lock in funds for 24hrs+ and generate VTX \\
 \end{enumerate}
 \subparagraph{Order book settlement fees}
 A wallet can become a node and earn VTX through order book settlement. 
@@ -419,25 +420,25 @@ A wallet can become a node and earn VTX through order book settlement.
 \subparagraph{EOS.IO}
 The following considerations will be applicable for deploying the exchange on the EOS.IO platform
 \begin{enumerate}
-\item Deploying contract has cost but is free to use. 
+\item Deploying a contract has a cost but is free to use. 
 \item Developers have to stake EOS.IO tokens to deploy contract.
 After the contract is destroyed, the locked tokens are returned.
 \item Dapps must allocate resources to their contracts, memory, cpu, bandwidth. 
-\item The payer of resources is up to the dapp.
+\item The choice of who pays the resources is up to the dapp.
 \item Multiple messages in one transaction and multiple accounts can be asigned to the same thread.
 
 \end{enumerate}
 
 \subparagraph{Budget forecast}
-Since the acceptation of decentralized exchanges is not just yet arrived,but is deemed to happen, 
-it is safe to say that the value of VTX will increase with demand over a longer period of time, around 5 years.
+Since the acceptance of decentralized exchanges has not yet arrived, but is deemed to happen, 
+it is logical to say that the value of VTX will increase with demand over a longer period of time, around 5 years.
 
 \subsection{Inter blockchain communication}
 EOS.IO is designed to make Inter-Blockchain-Communication proofs lightweight. 
 For chains with an insufficient capacity for processing the  IBC proofs and establishing validity, 
 there is the option to degrade to trusted oracles/escrows.
 To directly control other currency transactions with an
-EOS.IO based smart contract a trusted mutisig wallet holding the currency 
+EOS.IO based smart contract, a trusted mutisig wallet holding the currency 
 in escrow is used to persuade the signing/publishing of the currency 
 transaction based on IBC proofs from the originating chain.	
 \subsection{Security model}
@@ -492,10 +493,12 @@ The security concerns with the VDex environment can generally be categorized as 
 				\item Script investigations of certain non token purchases related addresses.
 			\end{enumerate}
 		\subsubsection{Transaction as Proof of Stake (TaPoS)}
-			Prevents a replay of a transaction on forks that do not include the referenced block 
-			signals the network that a particular user and their stake are on a specific fork.
-		\subsubsection{Double spend}-
-		A double spend is an attack where the given set of coins is spent in more than one transaction.
+			\begin{enumerate}
+				\item Prevents a replay of a transaction on forks that do not include the referenced block 
+				\item Signals the network that a particular user and their stake are on a specific fork.
+			\end{enumerate}
+		\subsubsection{Double spend}
+		A double spend is an attack where a given set of coins is spent in more than one transaction.
 		\begin{enumerate}
 			\item Send two conflicting transactions in rapid succession into the network. This is called a race attack. 
 			\item Pre-mine one transaction into a block and spend the same tokens before releasing the block to invalidate that transaction. 
@@ -508,7 +511,7 @@ The security concerns with the VDex environment can generally be categorized as 
 		\end{enumerate} 
 
 		\subsubsection{Front running}
-		To prevent someone from copying another node's trade solution, 
+		To prevent someone from copying another node's trade solution 
 		and have it mined before the next supposed transaction in the pool, 
 		a higher fee per transaction is charged.\\ 
 		The major scheme of front-running in any protocol for
@@ -516,21 +519,21 @@ The security concerns with the VDex environment can generally be categorized as 
 		one or more orders from a pending order book settlement
 		transaction. EOS.IO and loopring both have remedies to this.
 		In both cases keys are not part of the on-chain transaction and thus remain unknown to parties other than the order book settling node.
-		Nodes dictate how they manage orders.
-		Each node will use a different solution for resolving the order books, inducing another level of randomness to promote security.
+		Nodes dictate how they manage orders;
+		each node will use a different solution for resolving the order books, inducing another level of randomness to promote security.
 			
 		
 		\subsubsection{Forged identities}
 		Malicious users acting as themselves or forged identities 
-		could send a large amount of small orders to attack Loopring
+		could send a large number of small orders to attack Loopring
 		nodes. However, most of these orders will be rejected 
 		for not yielding satisfying profit when matched. 
 		Again, nodes should dictate how they manage orders.
 		
 		\subsubsection{Insufficient Balance}
-		Malicious users could sign and spread orders whose order 
+		Malicious users could sign and spread orders whose 
 		value is non-zero but whose address actually has zero 
-		balance. Nodes could monitor and notice that some orders 
+		balance. Nodes could monitor and notice that some orders' 
 		actual balance is zero, update these order states accordingly
 		and then discard them. Nodes must spend time to update
 		the status of an order, but can also choose to minimize the
@@ -540,11 +543,11 @@ The security concerns with the VDex environment can generally be categorized as 
 		\subsubsection{Timing attack}
 		 Timing attacks are a class of cryptographic attacks through which a third-party observer can deduce the content of encrypted data 
 		 by recording and analyzing the time taken to execute cryptographic algorithms.
-		 The randomness of the timeouts in the raft algorithm prevents this.
+		 The randomness of timeouts in the raft algorithm prevents this.
 		
 		\subsubsection{Other EOS.IO security attributes}
 		\begin{enumerate}
-		\item No uses of mutex or locks for on chain parallellisation
+		\item No uses of mutex or locks for on-chain parallellisation
 		\item All accounts must only read and write in their own private database
 		\end{enumerate}
 		
@@ -562,13 +565,13 @@ The security concerns with the VDex environment can generally be categorized as 
 	
 	
 	\subsection{Multi blockchain}
-	Multi blockchain information can be obtained by aggregating blockchain timelines in parallel order 
-	with variance in the frequency where the state is changed, into a comprehensible data structure.
-	This will enable a system to trigger multichain load balancers, transfer states, draw data outputs from smart contracts 
+	Multi-blockchain information can be obtained by aggregating blockchain timelines in parallel order 
+	(with variance in the frequency of when the state is changed) into a comprehensible data structure.
+	This will enable a system to trigger multichain load balancers, transfer states, draw data outputs from smart contracts, 
 	and trigger execution of transactions on foreign blockchains. 
-	Relative block distance, relative global state and timestamped events are recorded on a global ledger to optimize and confirm transaction 
+	Relative block distance, relative global state, and timestamped events are recorded on a global ledger to optimize and confirm transactions 
 	before they actually happen on the native chain.
-	This can be used for instance to determine block production coincidence between chains to determine optimal liquidity.\cite{20}
+	This could be used to determine block production coincidence between chains to choose optimal liquidity.\cite{20}
 	
 	\subsection{User experience}
 	\subparagraph{Simulator}
@@ -587,23 +590,25 @@ The security concerns with the VDex environment can generally be categorized as 
 	\subsection{True decentralization}
 	 Decentralization is the process by which planning and decision-making are distributed or delegated away 
 	 from a central, authoritative location or group.
-	 EOS.IO is a free, open source, scalable and bug free infrastructure for decentralized applications. 
-	 EOS.IO software tries to ensure a fair and transparent block producer (BP) election process 
+	 
+	 EOS.IO is a free, open source, scalable infrastructure for decentralized applications. 
+	 It tries to ensure a fair and transparent block producer (BP) election process 
 	 utilizing a democratic delegated proof of stake (DPoS) consensus.
 	 A pragmatic understanding of the complexity of the task at hand combined with the unpredictability of human interactions 
-	 might contribute in accepting the fact that a minimal amount of centralization is required in the initial stages.
-	 The criteria of decreasing the \textit{incidences of centralization} with time should be mandatory. 
-	 VDex will always vote and have direct influence in this direction and can someday hope to make a difference in numbers.
-	 in any case, the exchange itself will possess several mechanisms to promote decentralization. 
+	 implies that a small amount of centralization may be required in the initial stages.
+	 The criteria of decreasing the \textit{incidences of centralization} with time is necessary. 
+	 VDex will always vote and have direct influence in the direction of pragmatic decentralization.
+	 
+	 Regardless, the exchange itself will possess several mechanisms to promote decentralization. 
 	 For instance the system for electing nodes when solving order books will not use a shared central clock or (DPoS) 
-	 but should for example be based on random timeouts for the determination of leaders in an election (RAFT) 
+	 but will be based either on random timeouts for the determination of leaders in an election (RAFT), 
 	 or using graph theory (DAG) in the case of the PARSEC protocol.
 	 
 	\subsection{System recovery}
 	By ensuring that the latest version of the ledger is always put forward, 
-	the RAFT and PARSEC protocols provide robust system for recovery in case of node failure by design.
+	the RAFT and PARSEC protocols provide a robust system for recovery in the case of node failure.
 	Security measures are also provided in case of IBC for trading with native blockchains. 
-	In the case of non identification of the chain, a fall back occurs to the native rules to then  wait until the next block or default to a short time lock.
+	In the case of non-identification of the chain, a fall back occurs to the native rules to wait until the next block or default to a short time lock.
 	
 	\subsection{Scalable and modular architecture}
 	To secure the potential for innovation, the principles, 
@@ -613,22 +618,25 @@ The security concerns with the VDex environment can generally be categorized as 
 	is very complex we must use different strategies: 
 	\subsubsection{Problem decomposition}
 	Problem solving strategy of breaking a problem up into a set of subproblems, solving each of the subproblems, 
-	and then composing a solution to the original problem from the solutions to the subproblems.
+	and then composing a solution to the original problem from the subproblem solutions.
 	\subsubsection{Minimize state space}
 	Dynamic programming and templating are hard because of complexity and debugging challenges. 
 	Nesting conditions can also seem unimportant for normal program execution.
-	Special attention to these patterns and details in the initial design will allow to maximize efficiency while allowing for easy replacement or addition of components.   
+	Special attention to these patterns and details in the initial design will maximize efficiency while allowing for easy replacement or addition of components.   
 	In the context where CPU, bandwidth and RAM are monetized, this is even more important. 
 	
 \section{Risk}
-	The sheer amount of transactions VDex hopes to one day process is hard to visualize 
+	The sheer number of transactions VDex will eventually process is hard to visualize, 
 	but in the context of the growing interest for decentralized exchanges, more transactions equate with more risk. 
 	Managing the risks of handling currency also proved initially to be a challenge to previous centralized providers. 
 	It was a long and arduous process.\\
-	\paragraph{} The evolution of the efficiency of decentralized exchanges should not be expected to be any different but unlike centralized exchanges, 
+	\paragraph{} The evolution of the efficiency of decentralized exchanges should not be expected to be any different, but unlike centralized exchanges, 
 	dexes have the support of the open source developer community which quickly contribute forward solutions to resolving problems and enhancing the product. \\
-	\paragraph{}  The Volentix DAO will ensure VTX counsel nomination within assembly. 
-	This structure poses a risk by its novel and sparsely tested approach but ensures solidity by analysis of its theoretical precepts.
+	
+	% Suggest removing
+	%\paragraph{}  The Volentix DAO will ensure VTX counsel nomination within assembly. 
+	%This structure poses a risk by its novel and sparsely tested approach but ensures solidity by analysis of its theoretical precepts.
+	%
 \paragraph{}
 \paragraph{}	
 \section{Timeline}
