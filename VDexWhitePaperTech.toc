@@ -1,0 +1,69 @@
+\contentsline {section}{\numberline {1}Introduction}{3}{section.1}
+\contentsline {section}{\numberline {2}Methodology}{4}{section.2}
+\contentsline {section}{\numberline {3}Volentix}{4}{section.3}
+\contentsline {subsection}{\numberline {3.1}Venue is a dynamic community platform. \\}{4}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Verto wallet}{4}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}Vespucci analytical engine}{4}{subsection.3.3}
+\contentsline {subsection}{\numberline {3.4}VDex}{5}{subsection.3.4}
+\contentsline {section}{\numberline {4}Architecture}{5}{section.4}
+\contentsline {subsubsection}{\numberline {4.0.1}Overview}{5}{subsubsection.4.0.1}
+\contentsline {subsubsection}{\numberline {4.0.2}Operating system}{5}{subsubsection.4.0.2}
+\contentsline {subsubsection}{\numberline {4.0.3}Inter Contract Communication}{7}{subsubsection.4.0.3}
+\contentsline {subsubsection}{\numberline {4.0.4}Side Chains}{7}{subsubsection.4.0.4}
+\contentsline {subsubsection}{\numberline {4.0.5}Liquidity}{7}{subsubsection.4.0.5}
+\contentsline {subsubsection}{\numberline {4.0.6}Hashed timelock contracts (Atomic Swaps)}{7}{subsubsection.4.0.6}
+\contentsline {subsection}{\numberline {4.1}Network Topology}{8}{subsection.4.1}
+\contentsline {subsubsection}{\numberline {4.1.1}Nodes}{8}{subsubsection.4.1.1}
+\contentsline {subsubsection}{\numberline {4.1.2}Aggregators}{8}{subsubsection.4.1.2}
+\contentsline {subsubsection}{\numberline {4.1.3}Latency}{8}{subsubsection.4.1.3}
+\contentsline {subsection}{\numberline {4.2}OrderBook}{9}{subsection.4.2}
+\contentsline {subsubsection}{\numberline {4.2.1}Data structures}{9}{subsubsection.4.2.1}
+\contentsline {subsubsection}{\numberline {4.2.2}On-Chain order book}{9}{subsubsection.4.2.2}
+\contentsline {subsubsection}{\numberline {4.2.3}Off-Chain order book}{9}{subsubsection.4.2.3}
+\contentsline {subsubsection}{\numberline {4.2.4}Decentalization process of order book settlement}{9}{subsubsection.4.2.4}
+\contentsline {subsection}{\numberline {4.3}Order settlement}{9}{subsection.4.3}
+\contentsline {subsection}{\numberline {4.4}VTX}{10}{subsection.4.4}
+\contentsline {subsubsection}{\numberline {4.4.1}Token creation}{10}{subsubsection.4.4.1}
+\contentsline {subsubsection}{\numberline {4.4.2}Initial Token offering}{10}{subsubsection.4.4.2}
+\contentsline {subparagraph}{Justification of token crowdsale vote}{11}{section*.2}
+\contentsline {subparagraph}{Multi signature account}{11}{section*.3}
+\contentsline {subsubsection}{\numberline {4.4.3}Fee model}{11}{subsubsection.4.4.3}
+\contentsline {subparagraph}{Transaction fees\\}{11}{section*.4}
+\contentsline {subparagraph}{Lock-in period fee\\}{11}{section*.5}
+\contentsline {subparagraph}{Order book settlement fees}{12}{section*.6}
+\contentsline {subparagraph}{EOS.IO}{12}{section*.7}
+\contentsline {subparagraph}{Budget forecast}{12}{section*.8}
+\contentsline {subsection}{\numberline {4.5}Inter blockchain communication}{12}{subsection.4.5}
+\contentsline {subsection}{\numberline {4.6}Security model}{12}{subsection.4.6}
+\contentsline {subsubsection}{\numberline {4.6.1}Introduction}{12}{subsubsection.4.6.1}
+\contentsline {subsubsection}{\numberline {4.6.2}General actions to be taken}{13}{subsubsection.4.6.2}
+\contentsline {subsubsection}{\numberline {4.6.3}Contract security}{13}{subsubsection.4.6.3}
+\contentsline {subsubsection}{\numberline {4.6.4}Malware detection by auditing processes}{13}{subsubsection.4.6.4}
+\contentsline {subsubsection}{\numberline {4.6.5}Random diversification}{14}{subsubsection.4.6.5}
+\contentsline {subsubsection}{\numberline {4.6.6}Multiple factor identification}{14}{subsubsection.4.6.6}
+\contentsline {subsubsection}{\numberline {4.6.7}Logs}{14}{subsubsection.4.6.7}
+\contentsline {subsubsection}{\numberline {4.6.8}Transaction as Proof of Stake (TaPoS)}{14}{subsubsection.4.6.8}
+\contentsline {subsubsection}{\numberline {4.6.9}Double spend}{14}{subsubsection.4.6.9}
+\contentsline {subsubsection}{\numberline {4.6.10}Front running}{15}{subsubsection.4.6.10}
+\contentsline {subsubsection}{\numberline {4.6.11}Forged identities}{15}{subsubsection.4.6.11}
+\contentsline {subsubsection}{\numberline {4.6.12}Insufficient Balance}{15}{subsubsection.4.6.12}
+\contentsline {subsubsection}{\numberline {4.6.13}Timing attack}{15}{subsubsection.4.6.13}
+\contentsline {subsubsection}{\numberline {4.6.14}Other EOS.IO security attributes}{15}{subsubsection.4.6.14}
+\contentsline {subsection}{\numberline {4.7}Inter blockchain communication}{15}{subsection.4.7}
+\contentsline {subsection}{\numberline {4.8}Multi blockchain}{16}{subsection.4.8}
+\contentsline {subsection}{\numberline {4.9}User experience}{16}{subsection.4.9}
+\contentsline {subparagraph}{Simulator}{16}{section*.9}
+\contentsline {subparagraph}{Templates}{16}{section*.10}
+\contentsline {subparagraph}{Comprehensive customizeable and detailed interface}{16}{section*.11}
+\contentsline {subsection}{\numberline {4.10}True decentralization}{16}{subsection.4.10}
+\contentsline {subsection}{\numberline {4.11}System recovery}{17}{subsection.4.11}
+\contentsline {subsection}{\numberline {4.12}Scalable and modular architecture}{17}{subsection.4.12}
+\contentsline {subsubsection}{\numberline {4.12.1}Problem decomposition}{17}{subsubsection.4.12.1}
+\contentsline {subsubsection}{\numberline {4.12.2}Minimize state space}{17}{subsubsection.4.12.2}
+\contentsline {section}{\numberline {5}Risk}{17}{section.5}
+\contentsline {paragraph}{}{18}{section*.12}
+\contentsline {paragraph}{}{18}{section*.13}
+\contentsline {paragraph}{}{18}{section*.14}
+\contentsline {paragraph}{}{18}{section*.15}
+\contentsline {section}{\numberline {6}Timeline}{18}{section.6}
+\contentsline {section}{\numberline {7}Conclusion}{18}{section.7}
