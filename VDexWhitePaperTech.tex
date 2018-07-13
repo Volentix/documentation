@@ -91,13 +91,13 @@ digital asset distribution and governance information, terms and conditions and 
 VDex will provide crypto currency exchange services directly from the user's wallet where both public and private keys are locally managed.
 The swapping of crypto assets does not involve the temporary custody of the tokens by a central operator, therefore VDex also allows users to trade crypto assets with others without losing custody of the tokens they hold. 
 Furthermore, VDex allows digital tokens to remain on the originator's wallet until all required transactions are completed. VDex supports trading in multiple cryptocurrencies and VDex is the host to multiple liquidity pools to accomodate different types of markets.
-The Verto wallet should be host to the native contracts or scripts it intends to trade in, the simplest operations being done with an atomic swap. 
+The Verto wallet should be host to the native contracts or scripts it intends to trade in, down to the simplest operation being a zero lock-in period atomic swap. 
 
 									
 \section{Architecture}
 	
 	\subsubsection{Overview}
-	Cross chain, inter wallet transactions are done by providing wallets with the contracts or scripts to transact in any cryptocurrency. The transaction between Bob and Alice entails Bob and Alice sending funds toward each other's accounts using these provided contracts best described in the original atomic swap paper.\cite{22} In this case, contracts have guarantees toward each other by the means of shared secrets within timeouts or refund occurs. The various means of ensuring collateral for a particular transaction or augmenting liquidity of a network can be done by various other means described later in this document.
+	Cross chain, inter wallet transactions are done by providing wallets with the contracts or scripts to transact in any cryptocurrency. The transaction between Bob and Alice entails Bob and Alice sending funds toward each other's accounts using these provided contracts best described in the original atomic swap paper.\cite{22} In this case, contracts have guarantees toward each other by the means of shared secrets within timeouts or else a \right) refund occurs. The various means of ensuring collateral for a particular transaction or augmenting liquidity of a network can be done by various other means described later in this document.
 	
 	\subsubsection{Operating system}
 	EOS.IO is an operating system-like framework upon which decentralized applications can be built. The software provides accounts, authentication, databases, asynchronous communication and scheduling across clusters. Components and protocols are already built into the platform and just a subset can be used to satisfy VDex requirements. VDex will initially benefit from the most standard features offered by EOS.IO such as account and wallet creation and the recovery of stolen keys but will subsequently have to implement the paradigms and patterns suggested by most protocols for the creation of decentralized exchanges through its contracts and provided tools:	\cite{3}\\
