@@ -1,0 +1,2 @@
+pdflatex VDexWhitePaper.tex
+
