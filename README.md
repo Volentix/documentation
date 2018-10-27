@@ -7,7 +7,7 @@
 
 > Whitepaper describing the VDex architecture.
 
-TODO: Fill out this long description.
+TODO: Volentix is building a decentralized digital assets exchange connected with a secure multi-currency cross-blockchain peer-to-peer wallet, a user-friendly market ratings analytical interface, and an incentive-based recruitment program
 
 ## Table of Contents
 
