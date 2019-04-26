@@ -11,7 +11,6 @@ Thanks for joining the Volentix community!
 - [About](#about)
 - [Escalation](#escalation)
 - [Communication](#communication)
-- [What We Are Looking For](#what-we-are-looking-for)
 - [Contributing](#contributing)
   * [Pull Request](#pull-request)
     + [Process](#process)
@@ -40,14 +39,6 @@ In the message, please provide as much information as possible. You will recieve
 ## Communication
 
 Each project is expected to manage their own communication and platform. Please see the project file CONTRIBUTING.md file for specifics. If the project does not list a communication channel, please escalate using the process [Escalation](#escalation) above.
-
-## What We Are Looking For
-
-In addition to the communication channels, the projects root CONTRIBUTING.md file will also provide a section outlining the kind of work they are looking for at the moment.
-
-## Styling
-
-Each project is responsible for providing its own code style guides. Please see the projects CONTRIBUTING.md file for details.
 
 ## Contributing
 
