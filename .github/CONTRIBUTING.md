@@ -20,7 +20,7 @@ Thanks for joining the Volentix community!
     + [Process](#process-1)
   * [Suggest A Feature](#suggest-a-feature)
     + [Process](#process-2)
-- [Collect You VTX](#collect-you-vtx)
+- [Collect Your VTX](#collect-your-vtx)
   * [Setting A Value](#setting-a-value)
 
 <!-- tocstop -->
@@ -129,7 +129,7 @@ Suggesting a feature is the same as submiting a bug, however, you will choose th
 
 ![alt text](img/enhancement.png "Enhancement")
 
-## Collect You VTX
+## Collect Your VTX
 
 Part of contributing to the Volentix ecosystem is the opportunity for you as developers to be compensated with VTX. VTX is the native token of utility for the Volentix ecosystem.
 
