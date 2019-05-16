@@ -21,3 +21,11 @@ Addendums are templated with the following structure at a minimum. You are free 
 |**Addendum End Date**      | When is the end date of this addendum. Can be Null|
 |**Costing**|Details about the costing of the addendum|
 |**Signature Section**      |The signature and date of signature for both parties|
+
+Note that the signature section will start with the following content:
+```
+The terms and provisions in this Addendum comply with the MOU and do not contradict any existing Addendums. This Addendum also applies to any subsequent Addendum added in the future to this agreement.
+
+IN WITNESS WHEREOF, the parties hereto have executed this Addendum on the __ day of ___, ___ [Date]
+```
+After that, both parties date and sign the addendum.
