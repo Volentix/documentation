@@ -15,7 +15,7 @@ Addendums are templated with the following structure at a minimum. You are free 
 |**Date of Finalization**   |Date the submission was approved or rejected|4
 |**Decision Taken**         |**Options:** Open, Approved, Denied, Closed |
 |**Short Description**      |Short desctiption of the Addendum|
-|**Detailed Description**    |As much information as that is required|
+|**Details**    |As much information as that is required|
 |**Deliverables**           | A list of work Items to be delivered|
 |**Stretch Goals**          | List of any stretch goals for the Addendum|
 |**Addendum End Date**      | When is the end date of this addendum. Can be Null|
