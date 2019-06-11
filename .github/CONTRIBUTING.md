@@ -106,7 +106,7 @@ In case your Feature request would require massive changes to the project, do no
 
 ### Pull Request
 
-If you are looking to do some development work, it iss best to start by picking a few issues before proposing new features of your own. In general, the team would be more comfortable after they have seen the 'cut of your jib', as it were.
+If you are looking to do some development work, it is best to start by picking a few issues before proposing new features of your own. In general, the team would be more comfortable after they have seen the 'cut of your jib', as it were.
 
 In order to begin, look for issues with one of the following tags:
 
