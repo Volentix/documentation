@@ -1,50 +1,40 @@
 # Security Policies and Procedures
 
-This document outlines security procedures and general policies for the `volentix-contracts`
-project.
+This document outlines security procedures and general policies for the Volentix Ecosystem.
 
-  * [Reporting a Bug](#reporting-a-bug)
+  * [Reporting a Security Issue](#reporting-a-security-issue)
   * [Disclosure Policy](#disclosure-policy)
   * [Comments on this Policy](#comments-on-this-policy)
 
-## Reporting a Bug
+## Reporting a Security Issue
 
-The `volentix-contracts` team and community take all security bugs in `volentix-contracts` seriously.
-Thank you for improving the security of `volentix-contracts`. We appreciate your efforts and
-responsible disclosure and will make every effort to acknowledge your
-contributions.
+The `Volentix` team and community take all security issues in all ecosystem projects seriously. We appreciate responsible disclosure and will work with you on every step of the way. We pledge to acknowledge your contributions and reward your awesome work - in a timely and professional manner.
 
-Report security bugs by emailing the lead maintainer at security-verto@volentixlabs.com.
+Report security issues by emailing the lead maintainer at security@volentixlabs.com - and if desired,
 
-The lead maintainer will acknowledge your email within 48 hours, and will send a
-more detailed response within 48 hours indicating the next steps in handling
-your report. After the initial reply to your report, the security team will
-endeavor to keep you informed of the progress towards a fix and full
-announcement, and may ask for additional information or guidance.
+The lead maintainer will acknowledge your email within 48 hours, and will send a more detailed response within 48 hours indicating the next steps in handling your report. After the initial reply to your report, the security team will endeavor to keep you informed of the progress towards a fix and full announcement, and may ask for additional information, guidance or POCs.
 
-Report security bugs in third-party modules to the person or team maintaining
-the module.
+Although we appreciate being informed about upstream vulnerabilities and will endeavor to work around or patch such problems, we advise reporting security issues in third-party modules to those responsible for maintaining the module. Only extreme cases will ever warrant hot-patching or offensive-forking.
 
 ## Disclosure Policy
 
-When the security team receives a security bug report, they will assign it to a
-primary handler. This person will coordinate the fix and release process,
+When the security team receives a security report, they will assign it to a
+primary handler. This person will coordinate the triage, fix and release process,
 involving the following steps:
 
-  * Manage the relationship with the initial submitter
-  * Confirm the problem and determine the affected versions.
-  * Audit code to find any potential similar problems.
+  * Manage the relationship with the initial submitter.
+  * Confirm the problem and determine affected versions.
+  * Audit code to find any similar problems.
   * Prepare fixes for all releases still under maintenance.
-  * Prepare statement to the community
-  * Confirmation back to the Foundation
+  * Prepare statement to the community.
+  * Confirmation back to the Foundation.
 
 Throughout the process, the Foundation team will be responsible for:
   
-  * Monitoring the process
-  * Renumerating the individual(s) who reported the bug
-  * Preparing announcements
+  * Monitoring the process.
+  * Renumerating the individual(s) who reported the bug based on industry standards of severity and reporter responsiveness.
+  * Preparing announcements.
 
 ## Comments on this Policy
 
-If you have suggestions on how this process could be improved please submit a
-pull request.
+If you have suggestions on how this process could be improved please submit a pull request.
