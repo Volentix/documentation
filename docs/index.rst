@@ -10,6 +10,7 @@ Welcome to Volentix Documenation's!
    :maxdepth: 2
 
    partnership/onBoarding.md
-   partnership/mou/writeAddendum.md
+   mou/writeAddendum.md
+   partnership/featureRollout.md
 
 
