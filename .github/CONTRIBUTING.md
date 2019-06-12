@@ -152,8 +152,6 @@ Projects should describe the stack needed, so if you encounter any problems, jus
 
 Once you have completed your work, visit your fork on GitHub and make a pull request. Before doing so, make sure that you provide all information in the pull request template.
 
-If you have not already signed the Contributor License Agreement (CLA) for the repository in question, you will be asked to do so before your PR will be reviewed.
-
 ##### Reviews and Merging
 
 If you discover that there are conflicts after making your PR, resolve the conflicts locally, make a new commit and push that commit to your branch. The PR will automatically be updated.
