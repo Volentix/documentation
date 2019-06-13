@@ -2,6 +2,24 @@
 
 This document outlines the process for onboarding a parnter into the Volentix ecosystem.
 
+  * [Documenation Strategy](#documenation-strategy)
+  * [Definition Of Responsibilities](#definition-of-responsibilities)
+  * [Community Communication Strategy](#community-communication-strategy)
+    + [Introductory Video](#introductory-video)
+    + [Messaging](#messaging)
+    + [Volentix Developer Update](#volentix-developer-update)
+  * [Escalation](#escalation)
+  * [Internal Communication](#internal-communication)
+    + [Daily Standup](#daily-standup)
+    + [Marketing Standup](#marketing-standup)
+    + [Bi-weekly Review](#bi-weekly-review)
+    + [Bi-weekly Planning](#bi-weekly-planning)
+    + [Governance Committee Review](#governance-committee-review)
+    + [Steering Committee Review](#steering-committee-review)
+    + [Steering Committee Planning](#steering-committee-planning)
+  * [Tools](#tools)
+  * [Reports](#reports)
+
 ## Documenation Strategy
 
 Organization managing repos must adhere to the general patterns and principles for the management of documenation within their repo.
@@ -74,8 +92,13 @@ Duration: 30 Mins
 Frequency:  2 weeks
 Duration: 60 mins
 
+### Governance Committee Review
+*Purpose:* Ensure that the organization remains compliant within the Volentix Ecosystems guidance policies.
+Frequency:  1 - 3 months.
+Duration: 60 mins
+
 ### Steering Committee Review
-*Purpose:* Review progress and alignment with redefined business objectives. Review financials. Review Community growth. Review Escalation, etc.
+*Purpose:* Review progress and alignment with redefined business objectives. Review financials. Review Community growth. Review Escalation, and takes the input from the Governance Committee Review.
 Frequency:  1 - 3 months.
 Duration: 60 mins
 
@@ -85,11 +108,12 @@ Frequency:  1 - 3 months.
 Duration: ½ - 1 day
 
 ## Tools
-*Discord:* Discord is the internal teams communication channel of preference. Note that the team channel is different than the community channel.
-*Zoom:* Used in ceremonies
-*Calendar:* Ceremonies will be calendar invites.
-*Email:* Email is fine if necessary.
-*Backlog:* At the time of writing, we will be leveraging GitHub's issue management project features. This is in the interest of transparency and ease of use. Additionally, many tools add plugins for Github projects that will allow 3rd party integration in the future.
+
+- *Discord:* Discord is the internal teams communication channel of preference. Note that the team channel is different than the community channel.
+- *Zoom:* Used in ceremonies
+- *Calendar:* Ceremonies will be calendar invites.
+- *Email:* Email is fine if necessary.
+- *Backlog:* At the time of writing, we will be leveraging GitHub's issue management project features. This is in the interest of transparency and ease of use. Additionally, many tools add plugins for Github projects that will allow 3rd party integration in the future.
 
 ## Reports
 The team will be responsible for various reports on their respective project repository.
