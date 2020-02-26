@@ -4,6 +4,10 @@
 {\sc Aelf}, {\em A multi-chain parallel computing blockchain framework},
   (2018).
 
+\bibitem{29}
+{\sc M.~V. M. B.-S. I. T.~B. Angelo~Laub, Fabian~Frank}, {\em Draft priveos
+  paper},  (2018).
+
 \bibitem{13}
 {\sc ARK}, {\em A platform for consumer adoption},  (2018).
 
@@ -64,7 +68,7 @@
   (2018).
 
 \bibitem{28}
-{\sc D.~P. Matteo~Bernardinia and M.~Pizzoniac}, {\em Blockchains meet
+{\sc M.~P. Matteo~Bernardinia, Diego~Penninob}, {\em Blockchains meet
   distributed hash tables: Decoupling validation from state storage},  (2019).
 
 \bibitem{9}
@@ -97,9 +101,8 @@
   ledger.ethereum project yellow paper},  (2014).
 
 \bibitem{27}
-{\sc Yahya Hassanzadeh-Nazarabadi and O.Ozkasap}, {\em
-  Lightchain: A dht-based blockchain for resource constrained environments},
-  (2019).
+{\sc O.~O. Yahya Hassanzadeh-Nazarabadi, Alptekin~Kupcu}, {\em Lightchain: A
+  dht-based blockchain for resource constrained environments},  (2019).
 
 \bibitem{7}
 {\sc F.~Zhou, Wang}, {\em Loopring: A decentralized token exchange protocol},
