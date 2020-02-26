@@ -64,11 +64,9 @@ Power users are enabled with the freedom to choose and thrive,
 while new users feel welcomed and free from the risks inherent in a centralized system. 
 The growth of the product resides in a flexible architecture able to adopt the best practices of 2nd and 3rd generation blockchain applications.  
 The task of building VDex mainly resides in successfully merging
-and integrating today's best protocols, paradigms, and patterns to match the 
-Volentix requirements on top of the 3rd generation blockchain, 
+and integrating today's best protocols, paradigms, and patterns to match the Volentix requirements on top of the 3rd generation blockchain, 
 the EOSIO decentralized operating system.
  	
-
 \section{Volentix}	
 The Volentix ecosystem which consists of DApps which improve the effectiveness of each other.
 The "four pillars" are an initial set of DApps which support the entire Volentix ecosystem,
@@ -133,8 +131,8 @@ VTX is an enabling value holder that flows through the pillars to enables them t
 	The transaction for moving of funds involves interaction with 2 blockchains. 
 	For each currency being traded, funds are deposited in the exchange where a new address or account of that currency is created and storing all key pairs on a DHT using Shamir's secret sharing scheme. Subsequently, the corresponding token is created on EOSIO or the funds are deposited to the corresponding account or address of the target currency to an address or account specified by the user.
 	All information submitted to the exchange is encrypted, is only accessible for the Vdex system  and never leaves the core of VDex. It can only be used to store or redeem value when a user has his/her private key in Verto or Scatter.
-	Transactions are signed among all nodes using that specific chain's Multi-Party Threshold algorithm [15] written in the RUST  programming language by sharing the main hashtable used in this algorithm onto a DHT. 
-	The native chains are also accessible through another DHT, which represents the latest state of each chain, distributed among the nodes via an encrypted routing table.[26][27]
+	Transactions are signed among all nodes using that specific chain's Multi-Party Threshold algorithm  \cite{26}  written in the RUST  programming language by sharing the main hashtable used in this algorithm onto a DHT. 
+	The native chains are also accessible through another DHT, which represents the latest state of each chain, distributed among the nodes via an encrypted routing table.\cite{27} \cite{28}
 	 
 \subsubsection{Nodes}
 VDex nodes are computers run by individuals all over the planet as a support network for the Vdex exchange. 

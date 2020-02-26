@@ -1,11 +1,5 @@
 \begin{thebibliography}{10}
 
-\bibitem{27}
-
-
-\bibitem{26}
-
-
 \bibitem{19}
 {\sc Aelf}, {\em A multi-chain parallel computing blockchain framework},
   (2018).
@@ -69,6 +63,10 @@
 {\sc Q.~Liquid}, {\em Providing liquidity to the non-liquid crypto economy},
   (2018).
 
+\bibitem{28}
+{\sc D.~P. Matteo~Bernardinia and M.~Pizzoniac}, {\em Blockchains meet
+  distributed hash tables: Decoupling validation from state storage},  (2019).
+
 \bibitem{9}
 {\sc S.~R. M.P.M-S, Aniket Kate Matteo~Maffei}, {\em Concurrency and privacy
   with payment-channel networks},  (2017).
@@ -77,6 +75,10 @@
 {\sc F.~H. Q. M. S.~S. Pierre~Chevalier, Bart lomiej~Kami´nski}, {\em Protocol
   for asynchronous, reliable, secure and efficient consensus (parsec)},
   (2018).
+
+\bibitem{26}
+{\sc A.~N. Rosario~Gennaro, Steven~Goldfeder}, {\em Threshold-optimal dsa/ecdsa
+  signatures and an application to bitcoin wallet security},  (2016).
 
 \bibitem{16}
 {\sc SingularityNET}, {\em A decentralized, open market and inter-network for
@@ -93,6 +95,11 @@
 \bibitem{5}
 {\sc G.~Wood}, {\em Ethereum: A secure decentralised generalised transaction
   ledger.ethereum project yellow paper},  (2014).
+
+\bibitem{27}
+{\sc Yahya Hassanzadeh-Nazarabadi and O.Ozkasap}, {\em
+  Lightchain: A dht-based blockchain for resource constrained environments},
+  (2019).
 
 \bibitem{7}
 {\sc F.~Zhou, Wang}, {\em Loopring: A decentralized token exchange protocol},
