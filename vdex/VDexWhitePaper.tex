@@ -22,7 +22,7 @@
 }
 
 %opening
-\title{VDex White Paper v0.1.4}
+\title{VDex White Paper v0.2.0]}
 \author{
 		The Volentix Labs Team\\
 	\texttt{info@volentixlabs.com}
@@ -254,6 +254,20 @@ The ability to synchronize order books on the fly according to rules based on mo
 With this in mind, containers provided by EOSIO provide best performance.\cite{25} and
 using these containers to unify the order book morphology is optimal.
 
+\subsection{Oracles}
+At the time of this writing, three solutions are studied to obtain off chain data.
+\subsubsection{An EOS oracle built by EOS Titan}
+Oracle residing on EOS provides near-realtime price of the asset pairs to other smart contracts.
+\textit{https://github.com/eostitan/delphioracle} 
+
+\subsubsection{Vdex oracles residing on Vdex nodes}
+Multi party source of truth for customized data schemes.
+Hash of data can be validated by taking the largest number 
+of datablocks with that hash.
+
+{Chainlink relays residing on Vdex nodes}
+Instead of calculating averages, validated data can be retrieved by the nodes from a third party such as Chainlink to then send the appropriate information to the EOS contract.
+
 
 \subsubsection{Example Data structures}
 
@@ -261,10 +275,15 @@ Using the Loopring Protocol FIFO (first-in-first-out) circular buffer, nodes can
 
 \subsubsection{EOS order book}
 An on-chain order book is a record of offers residing on the Vdex main contract's tables. 
+EOSIO Multi-Index API provides a C++ interface to the EOSIO database. It is patterned after Boost Multi Index Container. 
 
 \subsubsection{Vdex Meta order book}
-On the vDex nodes, the meta order books serve to store orders from Vdex and other exchanges. 
-Built within the period between two order book settlements, this book gathers orders from as many nodes, Vdex, Loopring or other as possible. At the moment the node network settles the meta order book, its Vdex portion should be identical to the Vdex order book residing on EOS.
+Liquidity can be augmented by subscribing to other markets.
+On the vDex nodes, the meta order books serve to store orders from Vdex and other exchanges. Volentix nodes are able to run such services as Loopring or Ccxt which can give access to rder books from other exchanges.
+On the EOS blockchain, table lookups can only be performed on tables possessing the same schema but since not all order books have the same structure, a data schema management strategy must be put in place in Vdex. 
+Vdex architecture gains flexibility by allowing queries even if the orderbook varaibles has been modified. Any variable can be added to the orderbook and is kept there for future use. 
+The same principle could be extended to schemas where the variable could be of more complex nature.
+Built within the period between two order book settlements, this book gathers orders from as many nodes, Vdex, Loopring or other as possible. At the moment the node network settles the meta order book, its Vdex EOS portion should be identical to the Vdex order book residing on EOS.
 
 \subsubsection{Consensus and decentralization process of order book settlement}
 For decentralization purposes, nodes will take turns to settle the order book. 
