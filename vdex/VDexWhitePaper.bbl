@@ -21,10 +21,6 @@
 {\sc V.~Buterin}, {\em Ethereum: a next generation smart contract and
   decentralized application platform},  (2013).
 
-\bibitem{21}
-{\sc S.~Cormier}, {\em A machine based societal model for curbing citizen
-  cynicism},  (2017).
-
 \bibitem{18}
 {\sc J.~O. Diego~Ongaro}, {\em In search of an understandable consensus
   algorithm},  (2018).
@@ -83,6 +79,10 @@
 \bibitem{26}
 {\sc A.~N. Rosario~Gennaro, Steven~Goldfeder}, {\em Threshold-optimal dsa/ecdsa
   signatures and an application to bitcoin wallet security},  (2016).
+
+\bibitem{21}
+{\sc D.~Rutledge}, {\em The digital assets ecosystem base code (daebc)},
+  (2019).
 
 \bibitem{16}
 {\sc SingularityNET}, {\em A decentralized, open market and inter-network for

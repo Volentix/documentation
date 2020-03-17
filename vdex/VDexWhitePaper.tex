@@ -22,7 +22,7 @@
 }
 
 %opening
-\title{VDex White Paper v0.2.0]}
+\title{VDex White Paper v0.2.1]}
 \author{
 		The Volentix Labs Team\\
 	\texttt{info@volentixlabs.com}
@@ -133,6 +133,7 @@ VTX is an enabling value holder that flows through the pillars to enables them t
 	All information submitted to the exchange is encrypted, is only accessible for the Vdex system  and never leaves the core of VDex. It can only be used to store or redeem value when a user has his/her private key in Verto or Scatter.
 	Transactions are signed among all nodes using that specific chain's Multi-Party Threshold algorithm  \cite{26}  written in the RUST  programming language by sharing the main hashtable used in this algorithm onto a DHT. 
 	The native chains are also accessible through another DHT, which represents the latest state of each chain, distributed among the nodes via an encrypted routing table.\cite{27} \cite{28}
+	Since Vdex hosts and interacts with many chains, it will be able to have its components run on any one of these chains. Furthermore, as the meta order book mechanism is developed, Vdex will gain independence from other chains by using its own consensus, DPOS or other and eventually writing its own blocks.
 	 
 \subsubsection{Nodes}
 VDex nodes are computers run by individuals all over the planet as a support network for the Vdex exchange. 
@@ -256,17 +257,14 @@ using these containers to unify the order book morphology is optimal.
 
 \subsection{Oracles}
 At the time of this writing, three solutions are studied to obtain off chain data.
-\subsubsection{An EOS oracle built by EOS Titan}
-Oracle residing on EOS provides near-realtime price of the asset pairs to other smart contracts.
-\textit{https://github.com/eostitan/delphioracle} 
 
 \subsubsection{Vdex oracles residing on Vdex nodes}
 Multi party source of truth for customized data schemes.
 Hash of data can be validated by taking the largest number 
 of datablocks with that hash.
 
-{Chainlink relays residing on Vdex nodes}
-Instead of calculating averages, validated data can be retrieved by the nodes from a third party such as Chainlink to then send the appropriate information to the EOS contract.
+{Relays residing on Vdex nodes}
+Outside information, validated data can be retrieved by the contract with Provable API.
 
 
 \subsubsection{Example Data structures}
