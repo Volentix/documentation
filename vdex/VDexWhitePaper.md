@@ -22,7 +22,7 @@
 }
 
 %opening
-\title{VDex White Paper v0.2.1}
+\title{VDex White Paper v0.2.1]}
 \author{
 		The Volentix Labs Team\\
 	\texttt{info@volentixlabs.com}
@@ -34,14 +34,13 @@
 \maketitle
 \begin{description}
 \item Copyright \textcopyright 2020 Volentix
-\item {\tiny Without permission, anyone may use, reproduce or distribute any material in this white paper for non-commercial and educational use (i.e., other than for a fee or for commercial purposes) provided that the original source and the applicable copyright notice are cited.\\
-	
-	DISCLAIMER \\
-	
-	Volentix Labs prepared this white paper for information purposes only. The information does not purport to be comprehensive. The information is subject to change in whole or in part at any time without notice. Volentix Labs reserves the right to amend, replace, remove, or delete any and all information at the sole and exclusive discretion of Volentix Labs. Volentix Labs makes no representation or warranty, expressed or implied, concerning the accuracy or completeness of the information and expressly disclaims any and all liability of any and all kinds whatsoever for the information contained or not contained. Volentix Labs requests each and every reader to read the information fully and carefully, and to undertake independent investigation and analysis of the information, and to seek and obtain professional advice for purposes of evaluating the information. To the knowledge of Volentix Labs, no regulatory agency, government, or other third-party enforcement entity has reviewed, evaluated, or approved any part or all of the information. This information is not an offer or solicitation of any kind whatsoever and does not form the basis for any contract or commitment of any kind whatsoever. Any statement considered to be forward-looking is purely a matter of opinion, and no viewer should rely on any such statement or on any part or all of the information in any way whatsoever.}
-	
 \end{description}
 
+{\tiny Without permission, anyone may use, reproduce or distribute any material in this white paper for non-commercial and educational use (i.e., other than for a fee or for commercial purposes) provided that the original source and the applicable copyright notice are cited.\\
+
+DISCLAIMER \\
+
+Volentix Labs prepared this white paper for information purposes only. The information does not purport to be comprehensive. The information is subject to change in whole or in part at any time without notice. Volentix Labs reserves the right to amend, replace, remove, or delete any and all information at the sole and exclusive discretion of Volentix Labs. Volentix Labs makes no representation or warranty, expressed or implied, concerning the accuracy or completeness of the information and expressly disclaims any and all liability of any and all kinds whatsoever for the information contained or not contained. Volentix Labs requests each and every reader to read the information fully and carefully, and to undertake independent investigation and analysis of the information, and to seek and obtain professional advice for purposes of evaluating the information. To the knowledge of Volentix Labs, no regulatory agency, government, or other third-party enforcement entity has reviewed, evaluated, or approved any part or all of the information. This information is not an offer or solicitation of any kind whatsoever and does not form the basis for any contract or commitment of any kind whatsoever. Any statement considered to be forward-looking is purely a matter of opinion, and no viewer should rely on any such statement or on any part or all of the information in any way whatsoever.
 
 \begin{abstract}
 The goal of this project is to simplify and enhance the experience of handling cryptocurrency . 
@@ -475,10 +474,10 @@ All of us at Volentix are dedicating sizeable quantities of work and insights to
 \paragraph{}    
 
 \section{Conclusion}
-Open source constructs, concepts, and protocols that stand out by their simplicity
-favor a modular design which in allows the mix and matching of the desired system
-components. 
-
+Constructs, concepts, and protocols that stand out by their simplicity
+while retaining their effectiveness helps implement a modular
+design which enhances the system with the capacity to easily add or replace components 
+with the prospects of carefully advancing functionality as microservices are created.
 Although certain assumptions made in this paper still remain to be verified,
 a very distinctive direction for VDex architecture has been distilled as a highly flexible and modular MVP 
 capable of adaptation and reaction to the changing technological ecosystem.
@@ -514,4 +513,5 @@ capable of adaptation and reaction to the changing technological ecosystem.
  \cite{25}
  \cite{26}
  \cite{27}
+ \end{27}
 \end{document}
