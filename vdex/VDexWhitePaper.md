@@ -766,6 +766,3 @@ Although certain assumptions made in this paper still remain to be
 verified, a very distinctive direction for VDex architecture has been
 distilled as a highly flexible and modular MVP capable of adaptation and
 reaction to the changing technological ecosystem.
-
-Bibliography {#bibliography .unnumbered}
-============
